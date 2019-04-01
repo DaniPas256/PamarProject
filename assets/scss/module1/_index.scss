@@ -68,6 +68,19 @@
     width: 600px;
     overflow: hidden;
     margin: auto;
+    position: relative;
+    &::after{
+      content: '';
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      border: 50px solid white;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      top: calc( 50% - 50px );
+      right: 0;
+    }
     .slider-area {
       width: 2500px;
       display: flex;
@@ -178,6 +191,10 @@
         will-change: padding, color;
         transition: padding 1s ease, color 1s ease;
         cursor: pointer;
+        a{
+          text-decoration: none;
+          color: $text
+        }
         &:after {
           content: "";
           display: block;
@@ -211,16 +228,15 @@
     width: 100%;
     display: flex;
     flex: 1 auto;
-    border: 1px solid $gray;
     padding: 0;
 
     > .slider-item {
       flex-grow: 1;
       flex-basis: 0;
-      border-right: 1px solid $text;
       list-style: none;
-      padding: 5px 20px;
-      text-align: center;
+      font-weight: bold;
+      padding: 0;
+      text-align: left;
       cursor: pointer;
     }
 
@@ -230,14 +246,17 @@
   }
 
   .slider-progress-bar-tube {
-    border: 1px solid #f0f0f0;
     border-radius: 3px;
-    background: #f0f0f0;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 33%, $text 48%, #ffffff 66%, #ffffff 66%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 33%,$text 48%,#ffffff 66%,#ffffff 66%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 33%,$text 48%,#ffffff 66%,#ffffff 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
     padding: 0px;
     .slider-progress-bar {
       height: 3px;
       width: 100%;
-      background: $red;
+      background: $blue;
       will-change: transform;
       border-radius: 3px;
     }
@@ -246,6 +265,12 @@
 
 .tiles__section {
   margin: 50px 0;
+  .tiles__slogan{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   .slide_viewer {
     display: flex;
     flex-flow: row nowrap;
@@ -445,7 +470,6 @@
 }
 
 .mosaic {
-  margin: 50px 0;
   .grid-container {
     height: 95vh;
     width: 100%;
@@ -471,11 +495,19 @@
         position: relative;
         cursor: pointer;
         height: calc(60% - 7.5px);
+        a{
+          display: block;
+          height: 100%;
+        }
       }
       .smaller {
         position: relative;
         cursor: pointer;
         height: calc(40% - 7.5px);
+        a{
+          display: block;
+          height: 100%;
+        }        
       }
 
       .blue-layer {
@@ -700,8 +732,21 @@ $logo-size: 250px;
     z-index: 1;
 
     .about__header_title {
-      font-size: 100px;
+      font-size: 7em;
       margin: 0;
+
+      &.decoration--bar{
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          height: 6px;
+          background: $red;
+          right: 1.6em;
+          width: 60px;
+          top: calc( 100% + .6em + 3px );
+        }
+      }
     }
 
     .about__pattern {

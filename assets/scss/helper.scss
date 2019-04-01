@@ -94,3 +94,11 @@ div.row > div {
   @include blue-layer;
   @include absolute-100;
 }
+
+.bold{
+  font-weight: bold;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}

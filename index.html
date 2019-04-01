@@ -19,6 +19,7 @@
 
 	<link rel="stylesheet" href="./assets/css/normalize.min.css" />
 	<link rel="stylesheet" href="./assets/css/flexboxgrid.min.css" />
+	<link rel="stylesheet" href="./assets/css/glightbox.min.css" />
 	<link rel="stylesheet" href="./assets/css/main.css" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -29,10 +30,19 @@
 		<h4 class="js-contact-modal">Contact Us</h4>
 		<nav>
 			<ul class="js-set-active">
-				<li class="active">01</li>
+				<li class="active"><a href="#section-1">01</a></li>
+				<li><a href="#section-2">02</a></li>
+				<li><a href="#section-3">03</a></li>
+				<li><a href="#section-4">04</a></li>
+				<li><a href="#section-5">05</a></li>
+				<li><a href="#section-6">06</a></li>
+				<li><a href="#section-7">07</a></li>
+				<!-- <li class="active">
+					<a href="section-01"></a>	01
+				</li>
 				<li>02</li>
 				<li>03</li>
-				<li>04</li>
+				<li>04</li> -->
 			</ul>
 		</nav>
 	</div>
@@ -66,7 +76,7 @@
 		</header>
 	</div>
 
-	<section class="banner-section" data-aos="fade-up">
+	<section class="banner-section" data-aos="fade-up" id='section-01'>
 		<div class="row p-l-20">
 			<div class="col-md-7 relative">
 				<img src="./assets/backgrounds/main_photo.jpg" class="main-banner" alt="Main Photo">
@@ -86,7 +96,7 @@
 		</div>
 	</section>
 
-	<section class="parallax-section relative" data-aos="fade-up" data-aos-id="parallax">
+	<section class="parallax-section relative" data-aos="fade-up" data-aos-id="parallax" id='section-02'>
 		<div class="parallax__bg">
 			<div class="row middle-md">
 				<div class="col-md-8 col-md-offset-2">
@@ -122,7 +132,27 @@
 		<div class="blue-layer"></div>
 	</section>
 
-	<section class="slide-show" data-aos="fade-up" data-aos-id="slide-show">
+	<section class="slide-show" data-aos="fade-up" data-aos-id="slide-show" id='section-03'>
+
+		<div class="row margin-0">
+			<div class="col-md-5">
+				<p class="blue-header m-b-30">WHAT'S NEW</p>
+			</div>
+			<div class="col-md-6 end-md m-t-10">
+				<button class="button-black">
+					All
+				</button>
+
+				<button class="button-black">
+					NEWS
+				</button>
+
+				<button class="button-black">
+					Projects
+				</button>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-md-6">
 				<div class="slider-container js-main-slider">
@@ -152,25 +182,37 @@
 			<div class="col-md-6">
 				<div class="slider-navigation">
 					<ul class="slider-navigation-list">
-						<li class="slider-item">1</li>
-						<li class="slider-item">2</li>
-						<li class="slider-item">3</li>
-						<li class="slider-item">4</li>
-						<li class="slider-item">5</li>
+						<li class="slider-item">01</li>
+						<li class="slider-item">02</li>
+						<li class="slider-item">03</li>
+						<li class="slider-item">04</li>
+						<li class="slider-item">05</li>
 					</ul>
 
 					<div class="slider-progress-bar-tube">
 						<div class="slider-progress-bar js-progress-bar">
 						</div>
 					</div>
+
+					<div class="slider-text-content m-t-50 p-t-30">
+						<p class="bold uppercase">PODIUM’ SPORTS AND ENTERTAINMENT ARENA </p>
+						<p class="uppercase">GLIWICE, POLAND</p>
+
+						<p class="m-t-50 bold uppercase">TASK RANGE:</p>
+						<p>OTE system , fire walls and ceilings,</p>
+					</div>
+
+					<div class="align-right m-t-50">
+						<button class="big-button button-transparent">READ MORE</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="about_us__section">
+	<section class="about_us__section" data-aos="fade-up" data-aos-id="about-us" id='section-04'>
 		<div class="about__header__wrapper">
-			<h3 class="about__header_title"> ABOUT </h3>
+			<h3 class="about__header_title decoration--bar"> ABOUT </h3>
 			<h3 class="about__header_title"> US </h3>
 			<img src="./assets/backgrounds/pattern.png" class="about__pattern" alt="">
 		</div>
@@ -190,7 +232,16 @@
 		</div>
 	</section>
 
-	<section class="tiles__section" data-aos="fade-up" data-aos-id="tiles">
+	<section class="tiles__section" data-aos="fade-up" data-aos-id="tiles" id='section-05'>
+		<div class="row margin-0">
+			<div class="col-md-5">
+				<p class="blue-header">What we do</p>
+			</div>
+		</div>
+
+		<h2 class="tiles__slogan">Our company is one of the biggest in Poland providing fire protection services such
+			as:</h2>
+
 		<div class="slide__wrapper">
 			<div class="slide_viewer">
 
@@ -294,7 +345,13 @@
 		</div>
 	</section>
 
-	<div class="logo__slider">
+
+	<div class="row margin-0" data-aos="fade-up" data-aos-id="logo-slier-title" id='section-06'>
+		<div class="col-md-5">
+			<p class="blue-header">Our clients</p>
+		</div>
+	</div>
+	<section class="logo__slider" data-aos="fade-up" data-aos-id="logo-slider">
 		<div class="logo__slider--area">
 			<div class="logo__slider--viewer">
 				<img class='first loaded' src="./assets/img/logo1.png" alt="">
@@ -316,100 +373,131 @@
 				<div class="last"></div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 
-	<section class="mosaic">
+	<section class="mosaic" data-aos="fade-up" data-aos-id="mosaic" id='section-07'>
+		<div class="row margin-0">
+			<div class="col-md-5">
+				<p class="blue-header m-b-30">References</p>
+			</div>
+		</div>
+
 		<div class="grid-container">
 			<div class="grid__row">
 				<div class="higher">
-					<img src="./assets/backgrounds/mosaic_1.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_1.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_1.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name">Shopping Mail</p>
+							<div class="separator"></div>
+							<p class="mosaic_place">Katowice, Poland</p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 				<div class="smaller">
-					<img src="./assets/backgrounds/mosaic_2.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_2.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_2.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="grid__row">
 				<div class="smaller">
-					<img src="./assets/backgrounds/mosaic_3.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+
+					<a href="./assets/backgrounds/mosaic_3.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_3.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 				<div class="higher">
-					<img src="./assets/backgrounds/mosaic_4.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_4.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_4.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="grid__row">
 				<div class="higher">
-					<img src="./assets/backgrounds/mosaic_5.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_5.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_5.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 				<div class="smaller">
-					<img src="./assets/backgrounds/mosaic_6.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_6.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_6.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="grid__row">
 				<div class="smaller">
-					<img src="./assets/backgrounds/mosaic_7.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_7.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_7.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 				<div class="higher">
-					<img src="./assets/backgrounds/mosaic_8.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name"></p>
-						<div class="separator"></div>
-						<p class="mosaic_place"></p>
-					</div>
-					<div class="blue-layer">
-					</div>
+					<a href="./assets/backgrounds/mosaic_8.png" class="glightboxTest"
+						data-glightbox="title: Lightbox title; description: This is the description of the slide">
+						<img src="./assets/backgrounds/mosaic_8.png" alt="">
+						<div class="mosaic__content">
+							<p class="mosaic_name"></p>
+							<div class="separator"></div>
+							<p class="mosaic_place"></p>
+						</div>
+						<div class="blue-layer">
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -470,7 +558,7 @@
 		</div>
 	</section>
 
-	<footer class="footer__section">
+	<footer class="footer__section" data-aos="fade-up" data-aos-id="footer">
 		<div class="row margin-0">
 			<div class="col-md-3">
 				<h5 class='footer_title'>Explore</h5>

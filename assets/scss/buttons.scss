@@ -20,6 +20,16 @@
   font-weight: bold;
 }
 
+.button-black{
+  text-transform: uppercase;
+  padding: 6px 18px;
+  background: white;
+  border: 1px solid black;
+  color: black;  
+  @include sweep-to-right( #000 );
+  @include lato;
+}
+
 .big-button {
   padding: 30px;
 }
