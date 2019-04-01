@@ -1,0 +1,25 @@
+.button-white {
+  background: $white;
+  color: $text;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 1px solid $white;
+  @include sweep-to-right;
+  @include lato;
+  font-weight: bold;
+}
+
+.button-transparent {
+  background: transparent;
+  border: 1px solid $blue;
+  color: $text;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  @include sweep-to-right;
+  @include lato;
+  font-weight: bold;
+}
+
+.big-button {
+  padding: 30px;
+}

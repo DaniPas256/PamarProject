@@ -1,6 +1,13 @@
+@import "config";
+@import "helper";
+@import "buttons";
+
 @import "module1/_index";
 
 body {
   margin: 0;
   padding: 0;
+  @include lato;
+  font-weight: 400;
+  font-size: 16px;
 }

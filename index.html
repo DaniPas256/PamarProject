@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
+<html lang="pl">
 <!--<![endif]-->
 
 <head>
@@ -14,13 +14,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-	<link rel="stylesheet" href="assets/css/normalize.min.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Roboto:400,500,700&amp;subset=latin-ext"
+		rel="stylesheet">
 
-	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<link rel="stylesheet" href="./assets/css/normalize.min.css" />
+	<link rel="stylesheet" href="./assets/css/flexboxgrid.min.css" />
+	<link rel="stylesheet" href="./assets/css/main.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+
+	<div class="fixed-menu">
+		<h4 class="js-contact-modal">Contact Us</h4>
+		<nav>
+			<ul class="js-set-active">
+				<li class="active">01</li>
+				<li>02</li>
+				<li>03</li>
+				<li>04</li>
+			</ul>
+		</nav>
+	</div>
+
 	<!--[if lt IE 8]>
 			<p class="browserupgrade">
 				You are using an <strong>outdated</strong> browser. Please
@@ -31,8 +47,7 @@
 
 	<div class="header-container">
 		<header class="wrapper clearfix">
-			<h1 class="title">h1.title</h1>
-			<nav>
+			<nav class="flex end-md">
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Experiance</a></li>
@@ -40,106 +55,470 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
+				<ul>
+					<li><a class='no-animation padding-0' href="#"> <img src="./assets/img/facebook_icon.png" alt="">
+						</a></li>
+					<li><a class='no-animation padding-0' href="#"> <img src="./assets/img/linkedin_icon.png" alt="">
+						</a></li>
+					<li><a class='no-animation' href="#">ENG</a></li>
+				</ul>
 			</nav>
 		</header>
 	</div>
 
-	<div class="slider-container js-main-slider">
-		<div class="slider-window">
-			<div class="slider-area js-slider-area">
-				<div class="slider-image active">
-					<img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+	<section class="banner-section" data-aos="fade-up">
+		<div class="row p-l-20">
+			<div class="col-md-7 relative">
+				<img src="./assets/backgrounds/main_photo.jpg" class="main-banner" alt="Main Photo">
+				<div class="blue-layer"></div>
+			</div>
+			<div class="col-md-3 flex flex-column content-center">
+				<div class="slogan-holder m-t-a">
+					<h1 class="slogan-part-1">be aware</h1>
+					<h2 class="slogan-part-2"> <span></span> be safe</h2>
 				</div>
-				<div class="slider-image">
-					<img src="https://png.pngtree.com/element_our/md/20180402/md_5ac1ec7ec581b.png" alt="">
+				<div class="banner-more-button m-t-a">
+					<a href="#">
+						<button class="button-transparent big-button">Our experiance</button>
+					</a>
 				</div>
-				<div class="slider-image">
-					<img src="https://cdn.pixabay.com/photo/2017/04/05/11/56/image-in-the-image-2204798_960_720.jpg"
-						alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="parallax-section relative" data-aos="fade-up" data-aos-id="parallax">
+		<div class="parallax__bg">
+			<div class="row middle-md">
+				<div class="col-md-8 col-md-offset-2">
+					<ul class="parallax__number--container">
+						<li class="flex flex-column middle-md">
+							<div>
+								<span class="parallax__number--title js-count-up" id="first_number">43</span>
+							</div>
+							<div class="m-t-20">
+								<span class='parallax__number--subtitle'>Years of experiance</span>
+							</div>
+						</li>
+						<li class="flex flex-column middle-md">
+							<div>
+								<span class="parallax__number--title js-count-up" id="second_number">54</span>
+							</div>
+							<div class="m-t-20">
+								<span class='parallax__number--subtitle'>Qualified Workers</span>
+							</div>
+						</li>
+						<li class="flex flex-column middle-md">
+							<div>
+								<span class="parallax__number--title js-count-up" id="third_number">35</span>
+							</div>
+							<div class="m-t-20">
+								<span class='parallax__number--subtitle'>Completed contracts</span>
+							</div>
+						</li>
+					</ul>
 				</div>
-				<div class="slider-image">
-					<img src="https://png.pngtree.com/element_our/md/20180402/md_5ac1ec7ec581b.png" alt="">
+			</div>
+		</div>
+		<div class="blue-layer"></div>
+	</section>
+
+	<section class="slide-show" data-aos="fade-up" data-aos-id="slide-show">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="slider-container js-main-slider">
+					<div class="slider-window">
+						<div class="slider-area js-slider-area">
+							<div class="slider-image active">
+								<img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+							</div>
+							<div class="slider-image">
+								<img src="https://png.pngtree.com/element_our/md/20180402/md_5ac1ec7ec581b.png" alt="">
+							</div>
+							<div class="slider-image">
+								<img src="https://cdn.pixabay.com/photo/2017/04/05/11/56/image-in-the-image-2204798_960_720.jpg"
+									alt="">
+							</div>
+							<div class="slider-image">
+								<img src="https://png.pngtree.com/element_our/md/20180402/md_5ac1ec7ec581b.png" alt="">
+							</div>
+							<div class="slider-image">
+								<img src="https://cdn.pixabay.com/photo/2017/04/05/11/56/image-in-the-image-2204798_960_720.jpg"
+									alt="">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="slider-image">
-					<img src="https://cdn.pixabay.com/photo/2017/04/05/11/56/image-in-the-image-2204798_960_720.jpg"
-						alt="">
+			</div>
+			<div class="col-md-6">
+				<div class="slider-navigation">
+					<ul class="slider-navigation-list">
+						<li class="slider-item">1</li>
+						<li class="slider-item">2</li>
+						<li class="slider-item">3</li>
+						<li class="slider-item">4</li>
+						<li class="slider-item">5</li>
+					</ul>
+
+					<div class="slider-progress-bar-tube">
+						<div class="slider-progress-bar js-progress-bar">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about_us__section">
+		<div class="about__header__wrapper">
+			<h3 class="about__header_title"> ABOUT </h3>
+			<h3 class="about__header_title"> US </h3>
+			<img src="./assets/backgrounds/pattern.png" class="about__pattern" alt="">
+		</div>
+		<div class="about__photo__wrapp relative">
+			<img src="./assets/backgrounds/about.png" class="about__about__image" alt="">
+
+			<div class="about__photo_desc">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, possimus.
+					Dicta voluptatum quibusdam error veniam delectus natus sunt quam hic assumenda. </p>
+
+				<div class="button__holder">
+					<button class="button-white big-button">
+						MORE ABOUT US
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="tiles__section" data-aos="fade-up" data-aos-id="tiles">
+		<div class="slide__wrapper">
+			<div class="slide_viewer">
+
+				<div class="slide__tile prevLeftSecond">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
 				</div>
 
+				<div class="slide__tile prev">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
+				</div>
 
+				<div class="slide__tile active selected">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="slide__tile next">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="slide__tile nextRightSecond">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="slide__tile hideRight">
+					<p class="slide_title">
+						FIRE PROTECTION SYSTEMS
+						ON STEEL STRUCTURES
+					</p>
+					<div class="separator"></div>
+					<div class="slide_image">
+						<a>
+							<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
+							<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+							<div class="overlay"></div>
+							<button class="slide_readmore">readmore</button>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="logo__slider">
+		<div class="logo__slider--area">
+			<div class="logo__slider--viewer">
+				<img class='first loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='loaded' src="./assets/img/logo2.png" alt="">
+				<img class='loaded' src="./assets/img/logo1.png" alt="">
+				<img class='unloaded' data-src="./assets/img/logo2.png" alt="">
+				<img class='unloaded' data-src="./assets/img/logo1.png" alt="">
+				<img class='unloaded' data-src="./assets/img/logo2.png" alt="">
+				<div class="last"></div>
 			</div>
 		</div>
 	</div>
 
-	<div class="main-container">
-		<div class="main wrapper clearfix">
-			<article>
-				<header>
-					<h1>article header h1</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-						sodales urna non odio egestas tempor. Nunc vel vehicula ante.
-						Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In
-						semper consequat est, eu porta velit mollis nec.
-					</p>
-				</header>
-				<section>
-					<h2>article section h2</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-						sodales urna non odio egestas tempor. Nunc vel vehicula ante.
-						Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In
-						semper consequat est, eu porta velit mollis nec. Curabitur posuere
-						enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus
-						velit suscipit ultrices. Proin in est sed erat facilisis pharetra.
-					</p>
-				</section>
-				<section>
-					<h2>article section h2</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-						sodales urna non odio egestas tempor. Nunc vel vehicula ante.
-						Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In
-						semper consequat est, eu porta velit mollis nec. Curabitur posuere
-						enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus
-						velit suscipit ultrices. Proin in est sed erat facilisis pharetra.
-					</p>
-				</section>
-				<footer>
-					<h3>article footer h3</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-						sodales urna non odio egestas tempor. Nunc vel vehicula ante.
-						Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In
-						semper consequat est, eu porta velit mollis nec. Curabitur posuere
-						enim eget turpis feugiat tempor.
-					</p>
-				</footer>
-			</article>
 
-			<aside>
-				<h3>aside</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-					sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam
-					bibendum iaculis libero, eget molestie nisl pharetra in. In semper
-					consequat est, eu porta velit mollis nec. Curabitur posuere enim
-					eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit
-					suscipit ultrices.
-				</p>
-			</aside>
+	<section class="mosaic">
+		<div class="grid-container">
+			<div class="grid__row">
+				<div class="higher">
+					<img src="./assets/backgrounds/mosaic_1.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name">Shopping Mail</p>
+						<div class="separator"></div>
+						<p class="mosaic_place">Katowice, Poland</p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+				<div class="smaller">
+					<img src="./assets/backgrounds/mosaic_2.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+			</div>
+
+			<div class="grid__row">
+				<div class="smaller">
+					<img src="./assets/backgrounds/mosaic_3.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+				<div class="higher">
+					<img src="./assets/backgrounds/mosaic_4.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+			</div>
+
+			<div class="grid__row">
+				<div class="higher">
+					<img src="./assets/backgrounds/mosaic_5.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+				<div class="smaller">
+					<img src="./assets/backgrounds/mosaic_6.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+			</div>
+
+			<div class="grid__row">
+				<div class="smaller">
+					<img src="./assets/backgrounds/mosaic_7.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+				<div class="higher">
+					<img src="./assets/backgrounds/mosaic_8.png" alt="">
+					<div class="mosaic__content">
+						<p class="mosaic_name"></p>
+						<div class="separator"></div>
+						<p class="mosaic_place"></p>
+					</div>
+					<div class="blue-layer">
+					</div>
+				</div>
+			</div>
 		</div>
-		<!-- #main -->
-	</div>
-	<!-- #main-container -->
+	</section>
 
-	<div class="footer-container">
-		<footer class="wrapper">
-			<h3>footer</h3>
-		</footer>
-	</div>
+	<section class="contact__modal">
+		<div class="row modal relative">
+			<div class="col-md-6 contact-data">
+				<p>
+					Leśna Street 44 a <br>
+					43-200 Pszczyna, Poland
+				</p>
 
-	<script src="dist/main.js"></script>
-	<script src="assets/js/main.js"></script>
+				<p>
+					Mobile +48 695 22 14 42 <br>
+					Fax +48 32 448 44 75
+				</p>
+
+				<p>
+					E-mail: <a class="normal-link" href="mailto:biuro@pamarpszczyna.pl">biuro@pamarpszczyna.pl</a> <br>
+					NIP: 6381723364 <br>
+					REGON: 240746890 <br>
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d40772.52590817738!2d19.002457197201522!3d50.3053130617979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle+maps!5e0!3m2!1sen!2spl!4v1553806675494!5m2!1sen!2spl"
+					width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-6 bg-gray">
+				<div class="align-right">
+					<span class="js-close-modal close-modal">&times;</span>
+				</div>
+				<p class="blue-header">CONTACT US</p>
+
+				<div class="form-data">
+					<div>
+						<label for="name">Imie</label>
+						<input type="text" id="name" name="name" value="">
+					</div>
+					<div>
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" value="">
+					</div>
+					<div>
+						<label for="message">Message</label>
+						<textarea name="message" id="message"></textarea>
+					</div>
+
+					<div class="align-right">
+						<button class="big-button button-transparent submit-button">Send</button>
+					</div>
+				</div>
+
+				<div class="align-right">
+					<img class='contact_pattern m-t-30' src="./assets/backgrounds/pattern.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer__section">
+		<div class="row margin-0">
+			<div class="col-md-3">
+				<h5 class='footer_title'>Explore</h5>
+				<nav>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Experiance</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">News</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-3">
+				<h5 class='footer_title'>Contact</h5>
+				<p class="footer_contact">
+					PAMAR SP. Z O.O. <br>
+					Leśna Street 44 a <br>
+					43-200 Pszczyna, Poland
+				</p>
+
+				<p class="footer_contact m-t-30">
+					Mobile +48 695 22 14 42 <br>
+					Fax +48 32 448 44 75 <br>
+					E-mail: biuro@pamarpszczyna.pl <br>
+					NIP: 6381723364 <br>
+					REGON: 240746890
+				</p>
+			</div>
+			<div class="col-md-3">
+				<h5 class='footer_title'>Certyficates</h5>
+				<a href="https://wizytowka.rzetelnafirma.pl/0XR0H28X" target="_blank">
+					<img src="./assets/img/rzetelna_firma.png" alt="">
+				</a>
+			</div>
+			<div class="col-md-3">
+				<h5 class='footer_title'>Legal</h5>
+				<a class="footer_policy" href="#"> Private policy</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+	<script src="./dist/main.js"></script>
+	<script src="./assets/js/main.js"></script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<!-- <script>
