@@ -95,10 +95,14 @@ div.row > div {
   @include absolute-100;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-.uppercase{
+.uppercase {
   text-transform: uppercase;
+}
+
+.important-padding {
+  padding: 10px 20px !important;
 }

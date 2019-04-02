@@ -65,20 +65,20 @@
 .slider-container {
   .slider-window {
     height: 500px;
-    width: 600px;
+    width: 100%;
     overflow: hidden;
     margin: auto;
     position: relative;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       height: 0px;
       width: 0px;
       position: absolute;
-      border: 50px solid white;
+      border: 30px solid white;
       border-top-color: transparent;
       border-bottom-color: transparent;
       border-left-color: transparent;
-      top: calc( 50% - 50px );
+      top: calc(50% - 30px);
       right: 0;
     }
     .slider-area {
@@ -90,6 +90,7 @@
         img {
           height: 500px;
           width: 600px;
+          object-fit: cover;
         }
       }
     }
@@ -159,7 +160,7 @@
   align-items: center;
   width: 100%;
   z-index: 10;
-  bottom: 4em;
+  bottom: calc(4em - 15px);
   h4 {
     position: relative;
     font-weight: bold;
@@ -191,9 +192,9 @@
         will-change: padding, color;
         transition: padding 1s ease, color 1s ease;
         cursor: pointer;
-        a{
+        a {
           text-decoration: none;
-          color: $text
+          color: $text;
         }
         &:after {
           content: "";
@@ -222,7 +223,7 @@
 
 .slider-navigation {
   overflow: hidden;
-  width: 50%;
+  max-width: 600px;
 
   .slider-navigation-list {
     width: 100%;
@@ -249,8 +250,20 @@
     border-radius: 3px;
     background: #ffffff; /* Old browsers */
     background: -moz-linear-gradient(top, #ffffff 33%, $text 48%, #ffffff 66%, #ffffff 66%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 33%,$text 48%,#ffffff 66%,#ffffff 66%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 33%,$text 48%,#ffffff 66%,#ffffff 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -webkit-linear-gradient(
+      top,
+      #ffffff 33%,
+      $text 48%,
+      #ffffff 66%,
+      #ffffff 66%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #ffffff 33%,
+      $text 48%,
+      #ffffff 66%,
+      #ffffff 66%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
     padding: 0px;
     .slider-progress-bar {
@@ -265,7 +278,7 @@
 
 .tiles__section {
   margin: 50px 0;
-  .tiles__slogan{
+  .tiles__slogan {
     text-align: center;
     font-weight: bold;
     margin-top: 50px;
@@ -495,7 +508,7 @@
         position: relative;
         cursor: pointer;
         height: calc(60% - 7.5px);
-        a{
+        a {
           display: block;
           height: 100%;
         }
@@ -504,10 +517,10 @@
         position: relative;
         cursor: pointer;
         height: calc(40% - 7.5px);
-        a{
+        a {
           display: block;
           height: 100%;
-        }        
+        }
       }
 
       .blue-layer {
@@ -735,16 +748,16 @@ $logo-size: 250px;
       font-size: 7em;
       margin: 0;
 
-      &.decoration--bar{
+      &.decoration--bar {
         position: relative;
-        &::after{
+        &::after {
           content: "";
           position: absolute;
           height: 6px;
           background: $red;
           right: 1.6em;
           width: 60px;
-          top: calc( 100% + .6em + 3px );
+          top: calc(100% + 0.6em + 3px);
         }
       }
     }
@@ -792,3 +805,5 @@ $logo-size: 250px;
     }
   }
 }
+
+@import "_media.index.scss";

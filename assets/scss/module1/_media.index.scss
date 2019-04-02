@@ -1,0 +1,137 @@
+@media screen and (max-width: 992px) {
+  .banner-section {
+    height: 500px;
+    overflow: hidden;
+    .slogan-holder h2 span::before {
+      content: "";
+      height: 8px;
+      width: 65px;
+      top: -30px;
+      left: -50px;
+    }
+    .slogan-holder .slogan-part-2::after {
+      content: "";
+    }
+    .mobile-banner-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 100%;
+      .banner-more-button {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+
+    .slogan-holder {
+      font-size: 10px;
+    }
+
+    .button-transparent {
+      color: white;
+    }
+  }
+
+  .parallax-section {
+    height: 300px;
+    .parallax__bg {
+      .parallax__number--container {
+        font-size: 10px;
+      }
+      .mobile-parallax-holder {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+      .parallax__number--container {
+        justify-content: center;
+        height: 130px;
+        > li.flex {
+          padding: 10px;
+          width: 30%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .slide-show {
+    .mobile-margin-right {
+      margin-right: 10px;
+    }
+    .slider-window {
+      width: 100%;
+    }
+    .slider-navigation {
+      width: 100%;
+    }
+    .mobile-set-padding {
+      padding: 10px 20px;
+    }
+  }
+
+  .about_us__section {
+    .about__header__wrapper {
+      display: none;
+    }
+    .about__photo__wrapp {
+      width: 100%;
+    }
+  }
+
+  .tiles__section {
+    .tiles__slogan {
+      padding: 0 20px;
+    }
+  }
+
+  .mosaic {
+    .grid-container {
+      .grid__row {
+        width: calc(33% - 10px);
+        &.mobile-display-none {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footer__section {
+    .mobile-align-center {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-show {
+    .slider-navigation {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+
+  .mosaic {
+    .grid-container {
+      .grid__row {
+        width: calc(50% - 10px);
+        &.xs-mobile-display-none {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .parallax-section {
+    .parallax__bg {
+      .parallax__number--container {
+        padding: 0;
+      }
+    }
+  }
+}
