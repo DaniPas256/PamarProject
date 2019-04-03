@@ -22,7 +22,6 @@ export class FixedMenuClass {
           .replace("#", "");
         let target = document.getElementById(target_id);
 
-        debugger;
         scrollToElement(target, {
           offset: 0,
           ease: "out-bounce",

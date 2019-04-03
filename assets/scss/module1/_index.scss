@@ -158,8 +158,8 @@
   transform-origin: bottom right;
   display: flex;
   align-items: center;
-  width: 100%;
-  z-index: 10;
+  width: 90vh;
+  z-index: 210;
   bottom: calc(4em - 15px);
   h4 {
     position: relative;
@@ -295,11 +295,11 @@
       height: 430px;
       width: 350px;
       background: white;
-      box-shadow: 0px 4px 6px 2px #e8e8e8;
+      box-shadow: 0px -5px 6px 2px #e8e8e8;
       margin: 0 5px;
       position: absolute;
-      transition: transform 1s, left 1s, opacity 1s, z-index 0s, height 1s;
-      will-change: transform, opacity, height;
+      transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+      will-change: transform, opacity;
       opacity: 1;
       &.hideLeft {
         left: 0%;
@@ -530,7 +530,7 @@
         transition: background-color 1s ease-in-out;
       }
 
-      &:hover {
+      > div:hover {
         .blue-layer {
           background: black;
         }
@@ -751,6 +751,7 @@ $logo-size: 250px;
       &.decoration--bar {
         position: relative;
         &::after {
+          display: none;
           content: "";
           position: absolute;
           height: 6px;

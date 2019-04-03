@@ -1,4 +1,27 @@
+@media screen and (min-width: 1440px) {
+  .about_us__section .about__photo__wrapp .about__photo_desc p{
+    font-size: 1.4em;
+  }
+}
+  @media screen and (max-width: 1200px) {
+  .about_us__section .about__header__wrapper .about__header_title{
+    font-size: 6em;
+  }
+
+  .about_us__section .about__header__wrapper .about__header_title.decoration--bar:after{
+    right: 1em;
+  }
+
+  .about__photo_desc{
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 992px) {
+  .big-button{
+    padding: 20px;
+  }
+
   .banner-section {
     height: 500px;
     overflow: hidden;
@@ -29,6 +52,9 @@
 
     .slogan-holder {
       font-size: 10px;
+        h1, h2{
+          color: white !important;
+        }
     }
 
     .button-transparent {
@@ -106,9 +132,16 @@
       text-align: center;
     }
   }
+
+  .slider-container .slider-window, .slider-container .slider-window .slider-area .slider-image img {
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .banner-section {
+    height: auto;
+  }  
   .slide-show {
     .slider-navigation {
       max-width: 80%;
@@ -134,4 +167,64 @@
       }
     }
   }
+
+  .xs-set-space{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .about__photo_desc{
+    font-size: 12px;
+    width: 70%;
+  }
+
+  .big-button{
+    padding: 15px;
+  }  
+}
+
+@media screen and (max-width: 650px) {
+  .about__photo_desc{
+    font-size: 10px;
+    width: 70%;
+  }
+  .big-button{
+    padding: 15px;
+  }
+
+  .slogan-holder{ 
+    font-size: 7px;
+    padding: 0 !important;
+    margin: auto !important;
+    h1, h2{
+      color: white !important;
+      font-size: 5em !important;
+    }
+  }
+
+  .banner-section .slogan-holder h2 span:before{
+    display: none;
+  }
+
+  .slider-container .slider-window, .slider-container .slider-window .slider-area .slider-image img {
+    height: 300px;
+  }  
+}
+
+@media screen and (max-width: 450px) {
+  .mosaic {
+    .grid-container {
+      height: 100vw;
+      .grid__row {
+        width: calc(100%);
+        &.iphone-display-none {
+          display: none;
+        }
+        .smaller, .higher{
+          height: 50%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }  
 }
