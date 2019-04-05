@@ -4,6 +4,8 @@ $gray: #efefef;
 $text: #343434;
 $white: #ffffff;
 
+$checkbox-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABHNCSVQICAgIfAhkiAAAAVtJREFUSInt1M9KAlEUBvDvXGVqoUHeFtUuEAQXoTOmAwa5jnDRC9SjuAh6h6B9EEEQRIuIVvmvRkpaBC4MgigdhVpY6HhauakYR2WEwm95Oef+7oHDpbqutQDOw80wYvL9Y95LjGeZN1JuWqaulQFAuIl8zwSbYOPBmiuRyFiwph5Ndz3imIPBKbs676hQI6GtWow9xWqvUaXyaVc70mRvseVQl/gIopOeub576Fc/9GS1aHSx7RHnZPGWLN4WnPTYTmYm1PtGXN34ASVDflLEBbibkUXjzOkDbTHh4XUWtGvqaqZ3xuGwIjq+UyI+kIXSvlOoLzZ7VXoM0EucAa2uqye1ZMhv+qcPGVyVOSNj1zswBgCUfWrJnJEGOC8sX5UIiswb24NCjjAAIIDncqUdIqQC9LpJgDUMNtA2BrI35WGQXv7m3zjB/ifmZcJCXVcv3USYecnN+3/NF+AZazlAqcjwAAAAAElFTkSuQmCC");
+
 @mixin lato {
   font-family: "Lato", sans-serif;
   letter-spacing: 3px;
@@ -27,7 +29,7 @@ $white: #ffffff;
   &:before {
     content: "";
     display: block;
-    height: 3px;
+    height: 1px;
     width: 40px;
     position: absolute;
     left: -55px;
@@ -45,7 +47,7 @@ $white: #ffffff;
 }
 
 /* Sweep To Right */
-@mixin sweep-to-right( $bgColor: #2098d1, $txtColor: white ) {
+@mixin sweep-to-right($bgColor: #2098d1, $txtColor: white) {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -76,7 +78,8 @@ $white: #ffffff;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  &:hover {
+  &:hover,
+  &.active {
     color: $txtColor;
     &:before {
       -webkit-transform: scaleX(1);
@@ -116,10 +119,12 @@ p {
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
-
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
       }
 
       @media screen and (min-width: $max-vw) {

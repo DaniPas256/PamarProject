@@ -6,8 +6,10 @@ export class ContactModal {
     };
 
     init() {
-        document.querySelector('.js-contact-modal').addEventListener('click', () => {
-            MODAL_CONTAINER.classList.add('active');
+        Array.from(document.querySelectorAll('.js-contact-modal')).forEach(item => {
+            item.addEventListener('click', () => {
+                MODAL_CONTAINER.classList.add('active');
+            })
         });
 
         document.querySelector('.js-close-modal').addEventListener('click', () => {

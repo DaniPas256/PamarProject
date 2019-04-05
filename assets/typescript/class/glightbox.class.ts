@@ -1,15 +1,15 @@
 import * as GLightbox from "glightbox";
 
 export class GlightboxClass {
-  private lightboxDescription;
-
-  constructor() {
+  constructor(public $selectors = ['glightboxTest']) {
     this.init();
   }
 
   init() {
-    this.lightboxDescription = GLightbox({
-      selector: "glightboxTest"
-    });
+    this.$selectors.forEach(item => {
+      GLightbox({
+        selector: item
+      });
+    })
   }
 }

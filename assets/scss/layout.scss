@@ -1,8 +1,10 @@
 @import "config";
-@import "helper";
 @import "buttons";
+@import "helper";
 
 @import "module1/_index";
+@import "module1/_about";
+@import "module1/_experiance";
 
 body {
   margin: 0;

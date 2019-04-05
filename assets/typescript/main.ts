@@ -7,19 +7,41 @@ import { NumbersClass } from "./class/numbers.class";
 import { ContactModal } from "./class/contact-modal";
 import { TilesClass } from "./class/tiles.class";
 import { LogoClass } from "./class/logo.class";
+import { TabsClass } from './class/tabs.class';
+(function () {
 
-(function() {
   document.querySelector("html").scrollTop = 0;
 
+  document.querySelector(".hamburger").addEventListener("click", function () {
+    if (this.querySelector('.hamburger_input').checked) {
+      document.querySelector('.header-container nav').classList.add('mobile-active');
+    } else {
+      document.querySelector('.header-container nav').classList.remove('mobile-active');
+    }
+  })
+
   document.addEventListener("DOMContentLoaded", event => {
-    document.addEventListener("aos:in:parallax", ({ detail }) => {
-      new NumbersClass();
-    });
-    new MainSliderClass();
     new FixedMenuClass();
     new ContactModal();
-    new TilesClass();
-    new LogoClass();
-    new GlightboxClass();
+    // @ts-ignore
+    switch (PAGE_NAME) {
+      case 'index':
+        document.addEventListener("aos:in:parallax", ({ detail }) => {
+          new NumbersClass();
+        });
+        new MainSliderClass();
+        new TilesClass();
+        new LogoClass();
+        new GlightboxClass();
+        break;
+      case 'about':
+        new GlightboxClass();
+        break;
+      case 'experiance':
+        new TabsClass();
+        new GlightboxClass(['glightboxtab-1', 'glightboxtab-2', 'glightboxtab-3', 'glightboxtab-4', 'glightboxtab-5']);
+
+        break;
+    }
   });
 })();

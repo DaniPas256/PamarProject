@@ -4,6 +4,7 @@
   text-transform: uppercase;
   padding: 10px 15px;
   border: 1px solid $white;
+  outline: none;
   @include sweep-to-right;
   @include lato;
   font-weight: bold;
@@ -15,18 +16,20 @@
   color: $text;
   text-transform: uppercase;
   padding: 10px 15px;
+  outline: none;
   @include sweep-to-right;
   @include lato;
   font-weight: bold;
 }
 
-.button-black{
+.button-black {
   text-transform: uppercase;
   padding: 6px 18px;
   background: white;
   border: 1px solid black;
-  color: black;  
-  @include sweep-to-right( #000 );
+  color: black;
+  outline: none;
+  @include sweep-to-right(#000);
   @include lato;
 }
 

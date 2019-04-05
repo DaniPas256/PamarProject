@@ -1,6 +1,7 @@
 let SLIDE_SIZE = document
-  .querySelector(".slider-image img")
-  .getBoundingClientRect().width;
+  .querySelector(".slider-image img") == null ? 0 : document
+    .querySelector(".slider-image img")
+    .getBoundingClientRect().width;
 const NUMBER_OF_ELEMENTS = Array.from(document.querySelectorAll(".slider-item"))
   .length;
 const SINGLE_ELEMENT_SIZE_PERCENT = Math.ceil(100 / NUMBER_OF_ELEMENTS);
@@ -39,8 +40,8 @@ export class MainSliderClass {
         document.querySelector(".js-slider-area > .slider-image") === null
           ? 0
           : Array.from(
-              document.querySelectorAll(".js-slider-area > .slider-image")
-            ).length;
+            document.querySelectorAll(".js-slider-area > .slider-image")
+          ).length;
 
       Array.from(document.querySelectorAll(".slider-item")).forEach(item => {
         item.addEventListener("click", () => {
@@ -72,10 +73,10 @@ export class MainSliderClass {
 
   debounce(func, wait, immediate = false) {
     let timeout;
-    return function() {
+    return function () {
       let context = this,
         args = arguments;
-      let later = function() {
+      let later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };

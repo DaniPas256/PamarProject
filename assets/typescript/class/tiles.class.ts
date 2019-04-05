@@ -1,3 +1,5 @@
+import { Swipe } from './../helpers/Swipe.class';
+
 export class TilesClass {
     constructor() {
         this.init();
@@ -9,6 +11,18 @@ export class TilesClass {
                 this.moveToSelected(item);
             })
         })
+
+        let swipe = new Swipe('.slide_viewer');
+
+        swipe.onLeft = () => {
+            this.moveToSelected('prev');
+        };
+
+        swipe.onRight = () => {
+            this.moveToSelected('next');
+        }
+
+        swipe.run();
     }
 
     moveToSelected(element) {
