@@ -13,3 +13,7 @@ body {
 body {
   overflow-x: hidden;
 }
+
+ul {
+  list-style: none;
+}

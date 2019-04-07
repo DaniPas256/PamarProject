@@ -79,10 +79,11 @@
 				<h5 class='footer_title'>Explore</h5>
 				<nav>
 					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">Experiance</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">News</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "index" ? "blue-header" : ""?>' href="./index.php">Home</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "blue-header" : ""?>' href="./experiance.php">Experiance</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "references" || $__PAGE_NAME__ == "references_details" ? "blue-header" : ""?>' href="./references.php">References</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "about" ? "blue-header" : ""?>' href="./about.php">About</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "news" ? "blue-header" : ""?>' href="">News</a></li>
 					</ul>
 				</nav>
 			</div>

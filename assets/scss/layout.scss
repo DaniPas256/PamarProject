@@ -5,8 +5,8 @@
 @import "module1/_index";
 @import "module1/_about";
 @import "module1/_experiance";
-
-body {
+@import "module1/_references";
+references_details body {
   margin: 0;
   padding: 0;
   @include lato;

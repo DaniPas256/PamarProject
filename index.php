@@ -1,6 +1,7 @@
 <?php
 require_once './model/_config.php';
 require_once './model/content_model.php';
+$__PAGE_NAME__ = 'index';
 $content = new ContentModel();
 ?>
 <?php require_once './layout/_header.php';?>
@@ -14,8 +15,9 @@ $content = new ContentModel();
 		</div>
 		<div class="col-md-3 col-sm-12 col-xs-12 flex flex-column content-center mobile-banner-content">
 			<div class="slogan-holder m-t-a">
-				<h1 class="slogan-part-1">be aware</h1>
-				<h2 class="slogan-part-2"> <span></span> be safe</h2>
+				<img src="./assets/img/main_slogan.png" alt="">
+				<!-- <h1 class="slogan-part-1">be aware</h1> -->
+				<!-- <h2 class="slogan-part-2"> <span></span> be safe</h2> -->
 			</div>
 			<div class="banner-more-button m-t-a">
 				<a href="#">
@@ -60,7 +62,7 @@ $content = new ContentModel();
 			</div>
 		</div>
 	</div>
-	<div class="blue-layer"></div>
+	<!-- <div class="blue-layer"></div> -->
 </section>
 
 <section class="slide-show" data-aos="fade-up" data-aos-id="slide-show" id='section-03'>
@@ -133,7 +135,7 @@ $content = new ContentModel();
 					<p>OTE system , fire walls and ceilings,</p>
 				</div>
 
-				<div class="align-right m-t-50">
+				<div class="align-right m-t-50  p-r-3">
 					<button class="big-button button-transparent">READ MORE</button>
 				</div>
 			</div>

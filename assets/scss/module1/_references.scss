@@ -1,0 +1,140 @@
+.about__banner__section {
+  .reference--title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3em;
+    left: 0;
+    bottom: 0;
+  }
+
+  .refrences-tiltle-holder {
+    height: 100%;
+  }
+}
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  a {
+    display: block;
+    width: 23%;
+    transition: all 0.5s;
+
+    .grid__desc {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      will-change: opacity;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .grid__city,
+      .grid__name {
+        color: white;
+        margin: 15px 0;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .grid__name {
+        font-size: 2.5em;
+        text-transform: uppercase;
+      }
+
+      .separator {
+        width: 30%;
+        height: 3px;
+        background: white;
+        margin: auto;
+      }
+
+      .grid__city {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        @include roboto;
+      }
+    }
+
+    .blue-layer {
+      height: calc(100% - 4px);
+      transition: opacity 0.5s ease-in-out, background-color 1s ease-in-out;
+      will-change: opacity, background-color;
+    }
+
+    &:hover {
+      .blue-layer {
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0.4;
+      }
+
+      .grid__desc {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .grid {
+    a {
+      .grid__desc {
+        .grid__city {
+          font-size: 1em;
+        }
+        .grid__name {
+          font-size: 2em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about__banner__section {
+    .reference--title {
+      font-size: 2.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    a {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about__banner__section {
+    .reference--title {
+      font-size: 1.5em;
+      width: 100vw;
+      text-align: center;
+      transform: none !important;
+      top: auto !important;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid {
+    a {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .grid {
+    a {
+      width: 90%;
+    }
+  }
+}

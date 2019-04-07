@@ -1,4 +1,8 @@
 .header-container {
+  .logo-li img {
+    width: 250px;
+  }
+
   .hamburger {
     display: none;
     position: relative;
@@ -56,7 +60,16 @@
     }
   }
 
+  ul.logo_menu {
+    .logo-li {
+      margin-right: auto;
+    }
+  }
+
   nav {
+    ul.main_menu {
+      width: 100%;
+    }
     ul {
       list-style: none;
       display: flex;
@@ -79,6 +92,9 @@
           color: $text;
           position: relative;
           cursor: pointer;
+          &.active {
+            color: $blue;
+          }
         }
         a:not(.no-animation) {
           transition: color 0.5s ease;
@@ -161,19 +177,11 @@
   }
 
   .slogan-holder {
-    margin-left: -100%;
-    padding-right: 30%;
-    h1,
-    h2 {
-      @include roboto;
-      color: $text;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 7em;
-      margin: 0;
+    margin-left: -50%;
+    img {
+      max-width: 40vw;
       z-index: 2;
       position: relative;
-      text-align: right;
     }
     h2 {
       span {
@@ -202,7 +210,6 @@
 
   .banner-more-button {
     text-align: right;
-    padding-right: 30%;
   }
 }
 
@@ -215,7 +222,7 @@
   transform-origin: bottom right;
   display: flex;
   align-items: center;
-  width: 90vh;
+  width: 85vh;
   z-index: 210;
   bottom: calc(4em - 15px);
   h4 {
@@ -504,7 +511,7 @@
   .parallax__bg {
     height: 100%;
     width: 100%;
-    background: url("/assets/backgrounds/counters_bg_photo.jpg") no-repeat 100% 100% / cover;
+    background: $parallax-bg no-repeat 100% 100% / cover;
     background-attachment: fixed;
     > .row {
       height: 100%;

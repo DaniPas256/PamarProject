@@ -10,20 +10,20 @@ $content = new ContentModel();
 
 <div class="row margin-0">
     <div class="col-md-1"></div>
-    <div class="col-md-10 flex between-md m-b-50 js-tab-controls">
-        <button class="button-black l-s-n" data-tab = '1'>
+    <div class="col-md-10 col-sm-12 flex evenly-sm between-md m-b-50 js-tab-controls tab-controls">
+        <button class="button-black l-s-n f-s-12" data-tab = '1'>
             SMOKE EXHAUTS DUCTS
 		</button>
-        <button class="button-black l-s-n" data-tab = '2'>
+        <button class="button-black l-s-n f-s-12" data-tab = '2'>
             FIRE PROTECTION SYSTEMS
 		</button>
-        <button class="button-black l-s-n" data-tab = '3'>
+        <button class="button-black l-s-n f-s-12" data-tab = '3'>
             FIRE PROTECTION WALLS AND CEILINGS
 		</button>
-        <button class="button-black l-s-n" data-tab = '4'>
+        <button class="button-black l-s-n f-s-12" data-tab = '4'>
             SECURING FIRE EXPANSION JOINTS
 		</button>
-        <button class="button-black l-s-n" data-tab = '5'>
+        <button class="button-black l-s-n f-s-12" data-tab = '5'>
             FIRE PROTECTION OF INSTALLATION
 		</button>
     </div>
@@ -37,12 +37,12 @@ $content = new ContentModel();
             <div class="tab unactive" data-tab = '1'>
 
                 <div class="row margin-0">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                         <a href="./assets/backgrounds/experiance/tab_1-1.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-1.png" class = 'experiance-image' alt="">
                         </a>
                     </div>
-                    <div class="col-md-6 experiance-right">
+                    <div class="col-md-6 col-sm-12 col-xs-12 experiance-right">
                         <div class="experiance-desc">
                             <p>
                             We make self-supporting smoke exhaust ducts and ventilation in <span class = 'colorBlue'> <strong>Promat technology</strong> (Promaduct L-500 EIS 60, EIS 120) </span> in metro stations, stadiums, shopping malls and other large surface buildings.
@@ -63,16 +63,16 @@ $content = new ContentModel();
                 </div>
 
                 <div class="row margin-0">
-                    <div class="col-md-12 experiance-gallery">
+                    <div class="col-md-12 experiance-gallery col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                         <a href="./assets/backgrounds/experiance/tab_1-slide-1.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-slide-1.png" class = 'experiance-gallery-image' alt="">
-                        </a>
+                        </ col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1a>
                         <a href="./assets/backgrounds/experiance/tab_1-slide-2.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-slide-2.png" class = 'experiance-gallery-image' alt="">
-                        </a>
+                        </ col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1a>
                         <a href="./assets/backgrounds/experiance/tab_1-slide-3.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-slide-3.png" class = 'experiance-gallery-image' alt="">
-                        </a>
+                        </ col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1a>
                         <a href="./assets/backgrounds/experiance/tab_1-slide-4.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-slide-4.png" class = 'experiance-gallery-image' alt="">
                         </a>
@@ -80,7 +80,7 @@ $content = new ContentModel();
                 </div>
 
                 <div class="row margin-0">
-                    <div class="col-md-6 experiance-left">
+                    <div class="col-md-6 col-sm-12 col-xs-12 experiance-left">
                         <div class="experiance-desc">
                             <p>
                             Fire protection of steel ventilation and air conditioning ducts - <span class = 'colorBlue'> Conlit PLUS EIS 60, EIS 120 system. </span>
@@ -96,7 +96,7 @@ $content = new ContentModel();
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                         <a href="./assets/backgrounds/experiance/tab_1-2.png" class="glightboxtab-1">
                             <img src="./assets/backgrounds/experiance/tab_1-2.png" class = 'experiance-image' alt="">
                         </a>
@@ -106,7 +106,7 @@ $content = new ContentModel();
             </div>
             <div class="tab unactive" data-tab = '2'>
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_2-1.png" class="glightboxtab-2">
                                 <img src="./assets/backgrounds/experiance/tab_2-1.png" class = 'experiance-image' alt="">
                             </a>
@@ -151,7 +151,7 @@ $content = new ContentModel();
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_2-2.png" class="glightboxtab-2">
                                 <img src="./assets/backgrounds/experiance/tab_2-2.png" class = 'experiance-image' alt="">
                             </a>
@@ -161,7 +161,7 @@ $content = new ContentModel();
                     <div class="space-separator"></div>
 
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_2-3.png" class="glightboxtab-2">
                                 <img src="./assets/backgrounds/experiance/tab_2-3.png" class = 'experiance-image' alt="">
                             </a>
@@ -195,7 +195,7 @@ $content = new ContentModel();
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_2-4.png" class="glightboxtab-2">
                                 <img src="./assets/backgrounds/experiance/tab_2-4.png" class = 'experiance-image' alt="">
                             </a>
@@ -204,7 +204,7 @@ $content = new ContentModel();
             </div>
             <div class="tab unactive" data-tab = '3'>
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_3-1.png" class="glightboxtab-3">
                                 <img src="./assets/backgrounds/experiance/tab_3-1.png" class = 'experiance-image' alt="">
                             </a>
@@ -246,7 +246,7 @@ $content = new ContentModel();
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_3-2.png" class="glightboxtab-3">
                                 <img src="./assets/backgrounds/experiance/tab_3-2.png" class = 'experiance-image' alt="">
                             </a>
@@ -254,7 +254,7 @@ $content = new ContentModel();
                     </div>
                     <div class="space-separator"></div>
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_3-3.png" class="glightboxtab-3">
                                 <img src="./assets/backgrounds/experiance/tab_3-3.png" class = 'experiance-image' alt="">
                             </a>
@@ -283,7 +283,7 @@ $content = new ContentModel();
             </div>
             <div class="tab unactive" data-tab = '4'>
                         <div class="row margin-0">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                                 <a href="./assets/backgrounds/experiance/tab_4-1.png" class="glightboxtab-4">
                                     <img src="./assets/backgrounds/experiance/tab_4-1.png" class = 'experiance-image' alt="">
                                 </a>
@@ -313,7 +313,7 @@ $content = new ContentModel();
             </div>
             <div class="tab unactive" data-tab = '5'>
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_5-1.png" class="glightboxtab-5">
                                 <img src="./assets/backgrounds/experiance/tab_5-1.png" class = 'experiance-image' alt="">
                             </a>
@@ -356,7 +356,7 @@ $content = new ContentModel();
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_5-2.png" class="glightboxtab-5">
                                 <img src="./assets/backgrounds/experiance/tab_5-2.png" class = 'experiance-image' alt="">
                             </a>
@@ -364,7 +364,7 @@ $content = new ContentModel();
                     </div>
                     <div class="space-separator"></div>
                     <div class="row margin-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             <a href="./assets/backgrounds/experiance/tab_5-3.png" class="glightboxtab-5">
                                 <img src="./assets/backgrounds/experiance/tab_5-3.png" class = 'experiance-image' alt="">
                             </a>

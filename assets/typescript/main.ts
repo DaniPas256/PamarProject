@@ -8,6 +8,9 @@ import { ContactModal } from "./class/contact-modal";
 import { TilesClass } from "./class/tiles.class";
 import { LogoClass } from "./class/logo.class";
 import { TabsClass } from './class/tabs.class';
+import { GridClass } from './js/grid.js';
+
+
 (function () {
 
   document.querySelector("html").scrollTop = 0;
@@ -40,7 +43,12 @@ import { TabsClass } from './class/tabs.class';
       case 'experiance':
         new TabsClass();
         new GlightboxClass(['glightboxtab-1', 'glightboxtab-2', 'glightboxtab-3', 'glightboxtab-4', 'glightboxtab-5']);
-
+        break;
+      case 'references':
+        new GridClass('.masonry')
+        break;
+      case 'references_details':
+        new GlightboxClass();
         break;
     }
   });
