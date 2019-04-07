@@ -9,12 +9,16 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .header-container nav ul.logo_menu {
-    display: none;
+  .banner-section {
+    .slogan-holder {
+      img {
+        max-width: 30vw;
+      }
+    }
   }
 
-  ul.logo_menu_top {
-    display: block;
+  .header-container nav ul.logo_menu .logo-li img {
+    width: 150px;
   }
 }
 
@@ -32,13 +36,17 @@
   }
 
   .header-container nav ul.logo_menu .logo-li img {
-    width: 140px;
+    width: 120px;
   }
 }
 
 @media screen and (max-width: 992px) {
+  .parallax-section .parallax__bg .parallax__number--container li .parallax__number--subtitle {
+    margin-top: 0;
+  }
+
   .header-container nav ul.logo_menu .logo-li img {
-    width: 250px;
+    width: 200px;
   }
 
   .header-container nav ul.logo_menu {
@@ -295,6 +303,14 @@
 }
 
 @media screen and (max-width: 650px) {
+  .parallax-section .parallax__bg .parallax__number--container {
+    font-size: 8px;
+  }
+
+  .header-container nav ul.logo_menu .logo-li img {
+    width: 120px;
+  }
+
   .tiles__section {
     .slide_viewer {
       .slide__tile {
@@ -420,6 +436,10 @@
 }
 
 @media screen and (max-width: 350px) {
+  .parallax-section .parallax__bg .parallax__number--container {
+    font-size: 12px;
+  }
+
   .about__photo_desc {
     width: 80%;
     p {

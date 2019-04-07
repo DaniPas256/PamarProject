@@ -1,13 +1,6 @@
 
 <div class="header-container">
 	<header class="wrapper clearfix">
-			<ul class = 'logo_menu_top'>
-				<li class = 'logo-li'>
-					<a href="./index.php" class = 'no-animation'>
-						<img src="./assets/img/pamar_logo.png" alt="">
-					</a>
-				</li>
-			</ul>
 		<nav class="flex end-md">
 			<ul class = 'logo_menu'>
 				<li class = 'logo-li'>
@@ -24,7 +17,7 @@
 			</div>
 			<ul class = 'main_menu'>
 				<li><a class = '<?=$__PAGE_NAME__ == "index" ? "active" : ""?>' href="./index.php">Home</a></li>
-				<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "active" : ""?>' href="./experiance.php">Experiance</a></li>
+				<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "active" : ""?>' href="./experiance.php">Experience</a></li>
 				<li><a class = '<?=$__PAGE_NAME__ == "references" || $__PAGE_NAME__ == "references_details" ? "active" : ""?>' href="./references.php">References</a></li>
 				<li><a class = '<?=$__PAGE_NAME__ == "about" ? "active" : ""?>' href="./about.php">About</a></li>
 				<li><a class="js-contact-modal">Contact</a></li>

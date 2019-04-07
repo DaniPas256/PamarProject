@@ -6,10 +6,10 @@
 @import "module1/_about";
 @import "module1/_experiance";
 @import "module1/_references";
-references_details body {
+body {
   margin: 0;
   padding: 0;
   @include lato;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }

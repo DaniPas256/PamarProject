@@ -23,15 +23,15 @@ $content = new ContentModel();
 		</div>
 	</div>
 
-<div class="row margin-0">
+<div class="row margin-0" data-aos="fade-up" data-aos-id="mosaic_desc" >
     <div class="col-md-5 col-md-offset-1">
         <p class = 'desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At quos error accusamus alias, corporis quod ex quasi numquam amet nobis esse eum. Suscipit odit soluta culpa at praesentium accusantium, incidunt similique eveniet numquam! Veniam, ut voluptates. Molestias, eos autem possimus ea excepturi, consequuntur quam suscipit a nemo cumque minus, commodi aliquam fuga magnam quas culpa perspiciatis sapiente in itaque temporibus magni cupiditate alias exercitationem tenetur? Esse tenetur ipsam minima voluptate, sequi animi molestias tempora? Debitis officiis quos labore repellendus maiores distinctio iure! Quidem odit architecto reprehenderit neque, eligendi, odio suscipit modi laudantium explicabo sint nostrum? Deleniti, eos ut? Dolore, eum hic. Similique dolorem provident culpa ea officiis odit earum ut, ipsum consequuntur amet ipsa illo suscipit dicta natus placeat doloribus atque nisi eius ducimus quibusdam rem? Voluptatem amet voluptates dolor nisi deleniti quas provident sed, nostrum dolorum. Dolor repudiandae sint tempore sit sequi cumque voluptate, ut tempora deserunt fugiat sapiente, harum deleniti soluta blanditiis fuga quasi inventore pariatur consequatur molestias vero rem. Dignissimos tempora nam molestiae explicabo in illo eius tempore quibusdam, saepe, iusto suscipit fugiat maxime, aut consectetur delectus error perspiciatis quo perferendis asperiores rem? Unde atque nobis sed nisi, earum tempore amet aperiam exercitationem omnis, harum reprehenderit. Ab.
+        Pamar Sp. z o.o. was established in 2007 due to the growing needs on the fire protection market in Poland. The company comprises of highly qualified personnel among whom are fire protection specialists, fire experts and other employees with certifications such as working at heights, operating cranes, building scaffoldings and many others .
         </p>
     </div>
     <div class="col-md-4 col-md-offset-1">
         <p  class = 'desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatibus, reiciendis rerum sunt vitae voluptas modi pariatur dicta error deserunt nemo accusantium autem recusandae quidem itaque ullam eius perspiciatis illum molestiae corrupti provident! Repellendus similique consectetur dolorum libero quo voluptatum. Atque, illo. Eum quasi numquam alias veniam nesciunt pariatur vitae reiciendis vero quam quia quidem exercitationem, ab obcaecati esse. Quas fuga cumque ipsum praesentium facilis, maiores eos error iusto pariatur molestias dolore, dolor doloribus, quae autem corrupti. Iusto esse dignissimos delectus odio eveniet nesciunt fugiat voluptatum deserunt tenetur ad adipisci impedit hic consectetur aliquam, maiores exercitationem! Laudantium, fuga! Fugiat, alias.
+        We are an authorized installer of the biggest world trademarks and technologies such as Promat and Hilti  and many other fire protection systems producers in the world.
         </p>
     </div>
     <div class ='col-md-offset-1'></div>

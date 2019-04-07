@@ -80,7 +80,7 @@
 				<nav>
 					<ul>
 						<li><a class = '<?=$__PAGE_NAME__ == "index" ? "blue-header" : ""?>' href="./index.php">Home</a></li>
-						<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "blue-header" : ""?>' href="./experiance.php">Experiance</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "blue-header" : ""?>' href="./experiance.php">Experience</a></li>
 						<li><a class = '<?=$__PAGE_NAME__ == "references" || $__PAGE_NAME__ == "references_details" ? "blue-header" : ""?>' href="./references.php">References</a></li>
 						<li><a class = '<?=$__PAGE_NAME__ == "about" ? "blue-header" : ""?>' href="./about.php">About</a></li>
 						<li><a class = '<?=$__PAGE_NAME__ == "news" ? "blue-header" : ""?>' href="">News</a></li>
