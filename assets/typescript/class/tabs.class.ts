@@ -17,7 +17,8 @@ export class TabsClass {
             })
         });
 
-        this.changeTab(1);
+        // @ts-ignore
+        this.changeTab($_ACTIVE_TAB);
     }
 
     changeTab(active) {

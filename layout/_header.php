@@ -35,7 +35,7 @@
 		<![endif]-->
 
 	<div class="fixed-menu">
-		<h4 class="js-contact-modal">Contact Us</h4>
+		<h4 class="js-contact-modal"><?= $contentModule->getTranslate('nav.contact_us', true) ?></h4>
 		<?php if ($__PAGE_NAME__ === 'index'): ?>
 		<nav>
 			<ul class="js-set-active">

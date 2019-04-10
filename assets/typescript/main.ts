@@ -9,6 +9,7 @@ import { TilesClass } from "./class/tiles.class";
 import { LogoClass } from "./class/logo.class";
 import { TabsClass } from './class/tabs.class';
 import { GridClass } from './js/grid.js';
+import { ScrollToClass } from './class/scrollTo.class';
 
 
 (function () {
@@ -26,6 +27,10 @@ import { GridClass } from './js/grid.js';
   document.addEventListener("DOMContentLoaded", event => {
     new FixedMenuClass();
     new ContactModal();
+    console.log(document.querySelector('.section-07'));
+    new ScrollToClass();
+
+
     // @ts-ignore
     switch (PAGE_NAME) {
       case 'index':

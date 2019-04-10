@@ -15,11 +15,11 @@ export class TilesClass {
         let swipe = new Swipe('.slide_viewer');
 
         swipe.onLeft = () => {
-            this.moveToSelected('prev');
+            this.moveToSelected('next');
         };
 
         swipe.onRight = () => {
-            this.moveToSelected('next');
+            this.moveToSelected('prev');
         }
 
         swipe.run();

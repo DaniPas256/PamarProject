@@ -6,7 +6,7 @@ const NUMBER_OF_ELEMENTS = Array.from(document.querySelectorAll(".slider-item"))
   .length;
 const SINGLE_ELEMENT_SIZE_PERCENT = Math.ceil(100 / NUMBER_OF_ELEMENTS);
 const ANIMATION_TIME = 1000;
-const SLIDE_TIME = 2000 + ANIMATION_TIME;
+const SLIDE_TIME = 4000 + ANIMATION_TIME;
 
 const PROGRESS_BAR = document.querySelector(".js-progress-bar");
 const FRAME_PER_SECOND = 60 / (SLIDE_TIME / 1000);

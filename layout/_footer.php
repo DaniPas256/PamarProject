@@ -26,7 +26,7 @@
 				<div class="align-right">
 					<span class="js-close-modal close-modal">&times;</span>
 				</div>
-				<p class="blue-header">CONTACT US</p>
+				<p class="blue-header"><?= $contentModule->getTranslate('header.contact_us', true) ?></p>
 
 				<div class="mobile-contact-data contact-data">
 					<p>
@@ -49,20 +49,20 @@
 
 				<div class="form-data">
 					<div>
-						<label for="name">Imie</label>
+						<label for="name"><?= $contentModule->getTranslate('label.name', true) ?></label>
 						<input type="text" id="name" name="name" value="">
 					</div>
 					<div>
-						<label for="email">E-mail</label>
+						<label for="email"><?= $contentModule->getTranslate('label.email', true) ?></label>
 						<input type="email" id="email" name="email" value="">
 					</div>
 					<div>
-						<label for="message">Message</label>
+						<label for="message"><?= $contentModule->getTranslate('label.message', true) ?></label>
 						<textarea name="message" id="message"></textarea>
 					</div>
 
 					<div class="align-right">
-						<button class="big-button button-transparent submit-button">Send</button>
+						<button class="big-button button-transparent submit-button"><?= $contentModule->getTranslate('label.send', true) ?></button>
 					</div>
 				</div>
 
@@ -76,19 +76,19 @@
 	<footer class="footer__section">
 		<div class="row margin-0">
 			<div class="col-md-3 col-sm-6 col-xs-12 mobile-align-center">
-				<h5 class='footer_title'>Explore</h5>
+				<h5 class='footer_title'><?= $contentModule->getTranslate('nav.explore', true) ?></h5>
 				<nav>
 					<ul>
-						<li><a class = '<?=$__PAGE_NAME__ == "index" ? "blue-header" : ""?>' href="./index.php">Home</a></li>
-						<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "blue-header" : ""?>' href="./experiance.php">Experience</a></li>
-						<li><a class = '<?=$__PAGE_NAME__ == "references" || $__PAGE_NAME__ == "references_details" ? "blue-header" : ""?>' href="./references.php">References</a></li>
-						<li><a class = '<?=$__PAGE_NAME__ == "about" ? "blue-header" : ""?>' href="./about.php">About</a></li>
-						<li><a class = '<?=$__PAGE_NAME__ == "news" ? "blue-header" : ""?>' href="">News</a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "index" ? "blue-header" : ""?>' href="./index.php"><?= $contentModule->getTranslate('nav.home', true) ?></a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "experiance" ? "blue-header" : ""?>' href="./experiance.php"><?= $contentModule->getTranslate('nav.experience', true) ?></a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "references" || $__PAGE_NAME__ == "references_details" ? "blue-header" : ""?>' href="./references.php"><?= $contentModule->getTranslate('nav.references', true) ?></a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "about" ? "blue-header" : ""?>' href="./about.php"><?= $contentModule->getTranslate('nav.about', true) ?></a></li>
+						<li><a class = '<?=$__PAGE_NAME__ == "news" ? "blue-header" : ""?>' href=""><?= $contentModule->getTranslate('nav.news', true) ?></a></li>
 					</ul>
 				</nav>
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 mobile-align-center">
-				<h5 class='footer_title'>Contact</h5>
+				<h5 class='footer_title'><?= $contentModule->getTranslate('nav.contact', true) ?></h5>
 				<p class="footer_contact">
 					PAMAR SP. Z O.O. <br>
 					Leśna Street 44 a <br>
@@ -104,14 +104,14 @@
 				</p>
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 mobile-align-center">
-				<h5 class='footer_title'>Certyficates</h5>
+				<h5 class='footer_title'><?= $contentModule->getTranslate('nav.certyficates', true) ?></h5>
 				<a href="https://wizytowka.rzetelnafirma.pl/0XR0H28X" target="_blank">
 					<img src="./assets/img/rzetelna_firma.png" alt="">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 mobile-align-center">
-				<h5 class='footer_title'>Legal</h5>
-				<a class="footer_policy" href="#"> Private policy</a>
+				<h5 class='footer_title'><?= $contentModule->getTranslate('nav.legal', true) ?></h5>
+				<a class="footer_policy" href="#"> <?= $contentModule->getTranslate('nav.private_policy', true) ?> </a>
 			</div>
 		</div>
 	</footer>

@@ -67,6 +67,11 @@
   }
 
   nav {
+    .social-menu {
+      img {
+        width: 25px;
+      }
+    }
     ul.main_menu {
       width: 100%;
       padding-left: 0 !important;
@@ -373,6 +378,9 @@
       transition: transform 1s, left 1s, opacity 1s, z-index 0s;
       will-change: transform, opacity;
       opacity: 1;
+      a {
+        pointer-events: none;
+      }
       &.hideLeft {
         left: 0%;
         opacity: 0;
@@ -398,6 +406,9 @@
         z-index: 10;
         left: 50%;
         transform: translateY(0) translateX(-50%);
+        a {
+          pointer-events: auto;
+        }
       }
 
       &.next {
@@ -519,7 +530,7 @@
       height: 100%;
     }
     .parallax__number--container {
-      background: #ed383399;
+      background: #42a5e2b3;
       position: relative;
       z-index: 3;
       display: flex;
@@ -703,6 +714,7 @@
       }
       iframe {
         width: 100%;
+        margin-top: 50px;
       }
     }
 
@@ -882,6 +894,10 @@ $logo-size: 250px;
       }
     }
   }
+}
+
+.mobile-contact-data {
+  display: none;
 }
 
 @import "_media.index.scss";

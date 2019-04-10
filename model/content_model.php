@@ -1,4 +1,6 @@
 <?php
+global $__API;
+global $__PAGE_NAME__;
 
 class ContentModel
 {
@@ -6,9 +8,24 @@ class ContentModel
         'pl' => [],
         'en' => [],
     ];
+    private $language_ids = [
+        'pl' => 1,
+        'en' => 2
+    ];
     private $language = 'pl';
 
-    public function __construct($dir = './')
+    function getDataForPage( $page_name = null ){
+        global $__API;
+        global $__PAGE_NAME__;
+
+        if( $page_name == null ){
+            $page_name = $__PAGE_NAME__;
+        }
+        
+        return json_decode( file_get_contents( $__API . 'get_page_content/' . $page_name . '/' . $this->language_ids[ $this->language ] ), true );
+    }
+
+    public function __construct()
     {
         session_start();
         if (isset($_GET['lang'])) {
@@ -16,9 +33,7 @@ class ContentModel
         }
 
         $this->checkLanguage();
-        require_once $dir . 'locale/' . $this->language . '.php';
-        $this->available_languages[$this->language] = $language_content;
-        unset($language_content);
+        $this->available_languages[$this->language] = $this->getDataForPage();
     }
 
     public function checkLanguage()
@@ -37,9 +52,9 @@ class ContentModel
         }
     }
 
-    public function getTranslate($section)
+    public function getTranslate($section, $global = false)
     {
-        return $this->available_languages[$this->language][$section];
+        return $this->available_languages[$this->language]['dict'][$section];
     }
 
     public function getLanguage()

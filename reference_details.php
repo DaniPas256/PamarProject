@@ -2,7 +2,7 @@
 require_once './model/_config.php';
 $__PAGE_NAME__ = 'references_details';
 require_once './model/content_model.php';
-$content = new ContentModel();
+$contentModule = new ContentModel();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -23,7 +23,7 @@ $content = new ContentModel();
 
 <div class="row margin-0">
     <div class="col-md-5 col-md-offset-1">
-        <p class="blue-header">PROJECT DESCRIPTION</p>
+        <p class="blue-header"><?= $contentModule->getTranslate('project_description') ?></p>
         <p class = 'desc'>
         The Doha Metro serve both the capital and the suburbs with all major locations within easy and convenient reach. Most of the Doha Metro lines will be underground, so tunnelling plays a major role in construction.<br>
         <br>
@@ -31,7 +31,7 @@ $content = new ContentModel();
         </p>
     </div>
     <div class="col-md-4 col-md-offset-1">
-        <p class="blue-header">CONTRACT DETAILS</p>
+        <p class="blue-header"><?= $contentModule->getTranslate('contract_details') ?></p>
         <p  class = 'desc'>
         Contract Value - 12 000 000,00 PLN <br>
         Contact - ISG SALINI IMPREGILO RED LINE NORD <br>
@@ -73,7 +73,7 @@ $content = new ContentModel();
     <div class="col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1 col-xs-11 col-xs-offset-1 ">
         <a href="./references.php">
             <button class="button-transparent big-button m-t-30 m-b-30">
-                Back
+                <?= $contentModule->getTranslate('back') ?>
             </button>
         </a>
     </div>

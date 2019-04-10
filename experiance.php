@@ -3,7 +3,7 @@ require_once './model/_config.php';
 $__PAGE_NAME__ = 'experiance';
 $__LOAD_AOS__ = false;
 require_once './model/content_model.php';
-$content = new ContentModel();
+$contentModule = new ContentModel();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -12,19 +12,19 @@ $content = new ContentModel();
     <div class="col-md-1"></div>
     <div class="col-md-10 col-sm-12 flex evenly-sm between-md m-b-50 js-tab-controls tab-controls">
         <button class="button-black l-s-n f-s-12" data-tab = '1'>
-            SMOKE EXHAUTS DUCTS
+        <?= $contentModule->getTranslate('experience.category_1') ?>
 		</button>
         <button class="button-black l-s-n f-s-12" data-tab = '2'>
-            FIRE PROTECTION SYSTEMS
+        <?= $contentModule->getTranslate('experience.category_2') ?>
 		</button>
         <button class="button-black l-s-n f-s-12" data-tab = '3'>
-            FIRE PROTECTION WALLS AND CEILINGS
+        <?= $contentModule->getTranslate('experience.category_3') ?>
 		</button>
         <button class="button-black l-s-n f-s-12" data-tab = '4'>
-            SECURING FIRE EXPANSION JOINTS
+           <?= $contentModule->getTranslate('experience.category_4') ?>
 		</button>
         <button class="button-black l-s-n f-s-12" data-tab = '5'>
-            FIRE PROTECTION OF INSTALLATION
+        <?= $contentModule->getTranslate('experience.category_5') ?>
 		</button>
     </div>
     <div class="col-md-1"></div>
@@ -48,7 +48,7 @@ $content = new ContentModel();
                             We make self-supporting smoke exhaust ducts and ventilation in <span class = 'colorBlue'> <strong>Promat technology</strong> (Promaduct L-500 EIS 60, EIS 120) </span> in metro stations, stadiums, shopping malls and other large surface buildings.
                             </p>
 
-                            <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                            <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                             <ul class="experiance-list">
                                 <li>self-supporting wires made of fireproof boards with a thickness of 30-50mm achieve the fire resistance class EIS 60, EIS 120;</li>
@@ -86,7 +86,7 @@ $content = new ContentModel();
                             Fire protection of steel ventilation and air conditioning ducts - <span class = 'colorBlue'> Conlit PLUS EIS 60, EIS 120 system. </span>
                             </p>
 
-                            <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                            <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                             <ul class="experiance-list">
                                 <li>ventilation and air-conditioning ducts secured with a 60mm thick Conlit Plus system achieve the fire resistance class EIS 60, EIS 120;</li>
@@ -120,7 +120,7 @@ $content = new ContentModel();
                                     The protection of steel structures can be divided into three types:
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>protection of steel structure by painting with water-based paint, for example: Promapaint S. We can protect fire-proof elements of steel structures and steel zinc structures with open and closed profiles, used inside and outside objects, in environments with corrosive aggressiveness from C1 to C5- M. Fire resistance class of protection R 15, R 30, R 60;</li>
@@ -143,7 +143,7 @@ $content = new ContentModel();
                                     Wooden constructions can be protected by painting for flammability in some cases to NRO (fire-retardant). Securing wooden supporting structure for R 15, R 30, R 60, R 120 and ceilings on wooden beams up to REI 30, REI 60 and REI 120 is possible with <span class = 'colorBlue'> Promat Top, Promaxon Type A or Promatect </span>
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>high aesthetics of finishing;</li>
@@ -172,7 +172,7 @@ $content = new ContentModel();
                                     Execution of holes and inspection hatches and their protection for fire resistance EI 60, EI 120.
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>possibility of making access hatches in massive, light walls, ceilings and suspended ceilings;</li>
@@ -215,7 +215,7 @@ $content = new ContentModel();
                                 Execution of light partition walls and casing of installation shafts for EI 30, EI 60, EI 120 can also be obtained with class R.
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>small wall thicknesses;</li>
@@ -238,7 +238,7 @@ $content = new ContentModel();
                                     Wooden constructions can be protected by painting for flammability in some cases to NRO (fire-retardant). Securing wooden supporting structure for R 15, R 30, R 60, R 120 and ceilings on wooden beams up to REI 30, REI 60 and REI 120 is possible with <span class = 'colorBlue'> Promat Top, Promaxon Type A or Promatect </span>
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>high aesthetics of finishing;</li>
@@ -269,7 +269,7 @@ $content = new ContentModel();
                                     We also make fireproof glazing from Promaglas systems which is a complex, multi-layer special fireproof glass. Layers of gel between the glass panes producing at high temperature.
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>walls all glass with vertical or horizontal silicone joints;</li>
@@ -298,7 +298,7 @@ $content = new ContentModel();
                                     We are able to protect each dilatation in accordance with the fire protection conditions of the facility. We use many leading manufacturers such as Hilti, Promat Top, Rockwool. We have a wide offer for dilation protection.
                                     </p>
 
-                                    <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                    <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                     <ul class="experiance-list">
                                         <li>the possibility of sealing expansion joints in massive and light barriers fire protection of expansion joints;</li>
@@ -327,7 +327,7 @@ $content = new ContentModel();
                                     Our company, when securing all kinds of installation passes, uses many leading companies producing fire protection protections such as: PROMAT TOP, ROCKWOOL, HILTI, NICZUK, WALRAVEN. These protections are made in various fire resistance classes depending on the fire resistance class of the building. We have a wide offer for protection of installation transitions. The implementation of fire transitions is characterized by several fundamental issues:
                                     </p>
 
-                                    <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                    <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                     <ul class="experiance-list">
                                         <li>a wide possibility of making protection using masses, fireproof mortars and mineral wool</li>
@@ -346,7 +346,7 @@ $content = new ContentModel();
                                     Fire protection of electric cables and wires;
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>design of cable ducts to protect electrical installations;  </li>
@@ -375,7 +375,7 @@ $content = new ContentModel();
                                     Fire spraying systems from REI 30 to REI 240
                                 </p>
 
-                                <h4 class="blue-header checkbox__list--title">DETAILS AND BENEFITS</h4>
+                                <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
 
                                 <ul class="experiance-list">
                                     <li>steel, reinforced concrete and prestressed structures;</li>
@@ -391,5 +391,8 @@ $content = new ContentModel();
     <div class="col-md-1"></div>
 </div>
 
+<script>
+    var $_ACTIVE_TAB = <?=isset($_GET['tab']) ? $_GET['tab'] : 1?>;
+</script>
 
 <?php require_once './layout/_footer.php';?>

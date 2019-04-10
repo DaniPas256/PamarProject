@@ -2,7 +2,7 @@
 require_once './model/_config.php';
 $__PAGE_NAME__ = 'references';
 require_once './model/content_model.php';
-$content = new ContentModel();
+$contentModule = new ContentModel();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>

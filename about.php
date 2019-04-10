@@ -2,7 +2,7 @@
 require_once './model/_config.php';
 $__PAGE_NAME__ = 'about';
 require_once './model/content_model.php';
-$content = new ContentModel();
+$contentModule = new ContentModel();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -19,20 +19,16 @@ $content = new ContentModel();
 
 <div class="row m-t-30 m-b-30 m-l-0 m-r-0" data-aos="fade-up" data-aos-id="mosaic" >
 		<div class="col-md-5">
-			<p class="blue-header">Our Team</p>
+			<p class="blue-header"><?= $contentModule->getTranslate('our_team') ?></p>
 		</div>
 	</div>
 
 <div class="row margin-0" data-aos="fade-up" data-aos-id="mosaic_desc" >
     <div class="col-md-5 col-md-offset-1">
-        <p class = 'desc'>
-        Pamar Sp. z o.o. was established in 2007 due to the growing needs on the fire protection market in Poland. The company comprises of highly qualified personnel among whom are fire protection specialists, fire experts and other employees with certifications such as working at heights, operating cranes, building scaffoldings and many others .
-        </p>
+        <p class = 'desc'> <?= $contentModule->getTranslate('left') ?> </p>
     </div>
     <div class="col-md-4 col-md-offset-1">
-        <p  class = 'desc'>
-        We are an authorized installer of the biggest world trademarks and technologies such as Promat and Hilti  and many other fire protection systems producers in the world.
-        </p>
+        <p  class = 'desc'> <?= $contentModule->getTranslate('right') ?> </p>
     </div>
     <div class ='col-md-offset-1'></div>
 </div>
