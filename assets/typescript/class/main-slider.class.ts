@@ -118,6 +118,9 @@ export class MainSliderClass {
     next_element.classList.add("active");
     (<HTMLElement>document.querySelector(".js-slider-area")).style.transform =
       "translateX(-" + this.active_slide * SLIDE_SIZE + "px)";
+
+    document.querySelector('.slider-description.active').classList.remove('active');
+    document.querySelector('.slider-description[data-num="' + (this.active_slide + 1) + '"]').classList.add('active');
   }
 
   getChildNumber(child: any) {

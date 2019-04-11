@@ -1,4 +1,4 @@
-const slider_area: HTMLElement = document.querySelector('.logo__slider--viewer');
+let slider_area: HTMLElement = document.querySelector('.logo__slider--viewer');
 export class LogoClass {
     public translate = 0;
     public increment_value = 1;

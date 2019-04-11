@@ -69,6 +69,10 @@
   margin-bottom: 30px;
 }
 
+.flex-reverse {
+  flex-flow: row-reverse;
+}
+
 .experiance-gallery {
   display: flex;
   justify-content: space-between;

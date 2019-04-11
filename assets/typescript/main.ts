@@ -25,6 +25,7 @@ import { ScrollToClass } from './class/scrollTo.class';
   })
 
   document.addEventListener("DOMContentLoaded", event => {
+
     new FixedMenuClass();
     new ContactModal();
     console.log(document.querySelector('.section-07'));
@@ -50,11 +51,13 @@ import { ScrollToClass } from './class/scrollTo.class';
         new GlightboxClass(['glightboxtab-1', 'glightboxtab-2', 'glightboxtab-3', 'glightboxtab-4', 'glightboxtab-5']);
         break;
       case 'references':
-        new GridClass('.masonry')
+        new GridClass('.masonry');
+        new LogoClass();
         break;
       case 'references_details':
         new GlightboxClass();
         break;
     }
+
   });
 })();

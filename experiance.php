@@ -4,6 +4,8 @@ $__PAGE_NAME__ = 'experiance';
 $__LOAD_AOS__ = false;
 require_once './model/content_model.php';
 $contentModule = new ContentModel();
+$data = $contentModule->getPageData();
+
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -34,6 +36,51 @@ $contentModule = new ContentModel();
     <div class="col-md-1"></div>
     <div class="col-md-10 flex between-md m-b-50">
         <div class="tabs__holder js-tabs-content">
+			<?php foreach( $data['experiance'] as $category => $array ): ?>
+                <div class="tab unactive" data-tab = '<?=$category?>'>
+                    <?php foreach( $array as $k => $exp ): ?>
+                        <div class="row margin-0 <?= $k%2 == 0 ? '' : 'flex-reverse' ?>">
+                            <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                <a href="<?= $exp['get_files']['path'] ?>" class="glightboxtab-<?=$category?>">
+                                    <img src="<?= $exp['get_files']['path'] ?>" class = 'experiance-image' alt="<?= $exp['get_files']['name'] ?>">
+                                </a> 
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 experiance-<?= $k%2 == 0 ? 'right' : 'left' ?>">
+                                <div class="experiance-desc">
+                                    <?= $exp['description'] ?>
+
+                                    <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
+
+                                    <ul class="experiance-list">
+                                        <?php foreach( $exp['get_items'] as $item ): ?>
+                                            <li><?= $item['text'] ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php if( $exp['has_gallery'] == 1 && $exp['get_gallery']['get_images'] != null ): ?>
+                            <?php $chunked = array_chunk( $exp['get_gallery']['get_images'], 4 ); ?>
+                            <div class="row margin-0">
+                                <div class="col-md-12 experiance-gallery col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                    <?php foreach( $chunked as $chunk ): ?>
+                                        <?php foreach( $chunk as $photo ): ?>
+                                            <a href="<?=$photo['get_file']['path']?>" class="glightboxtab-<?=$category?>">
+                                                <img src="<?=$photo['get_file']['path']?>" class = 'experiance-gallery-image' alt="<?=$photo['get_file']['name']?>">
+                                            </a>
+                                        <?php endforeach; ?>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php else: ?>
+                            <div class="space-separator"></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>            
+
+			<?php endforeach; ?>
+<!-- 
             <div class="tab unactive" data-tab = '1'>
 
                 <div class="row margin-0">
@@ -386,7 +433,7 @@ $contentModule = new ContentModel();
                         </div>
                     </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="col-md-1"></div>
 </div>

@@ -1,8 +1,9 @@
 <?php
-require_once './model/_config.php';
-$__PAGE_NAME__ = 'index';
-require_once './model/content_model.php';
-$contentModule = new ContentModel();
+	require_once './model/_config.php';
+	$__PAGE_NAME__ = 'index';
+	require_once './model/content_model.php';
+	$contentModule = new ContentModel();
+	$data = $contentModule->getPageData();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -94,24 +95,18 @@ $contentModule = new ContentModel();
 			<div class="slider-container js-main-slider">
 				<div class="slider-window">
 					<div class="slider-area js-slider-area">
-						<div class="slider-image active">
-							<img src="./assets/backgrounds/mosaic_1.png" alt="">
+					
+					<?php foreach( $data['news'] as $key => $image ): ?>
+						<div class="slider-image <?=$key == 0 ? 'active' : '' ?>">
+							<img src="<?=$image['get_files']['path']?>" alt="<?=$image['title']?>">
 						</div>
-						<div class="slider-image">
-							<img src="./assets/backgrounds/mosaic_2.png" alt="">
+					<?php endforeach; ?>
+
+					<?php foreach( $data['references_slider'] as $key => $image ): ?>
+						<div class="slider-image <?=$key == 0 ? 'active' : '' ?>">
+							<img src="<?=$image['get_file']['path']?>" alt="<?=$image['full_name']?>">
 						</div>
-						<div class="slider-image">
-							<img src="./assets/backgrounds/mosaic_3.png" alt="">
-						</div>
-						<div class="slider-image">
-							<img src="./assets/backgrounds/mosaic_4.png" alt="">
-						</div>
-						<div class="slider-image">
-							<img src="./assets/backgrounds/mosaic_5.png" alt="">
-						</div>
-						<div class="slider-image">
-							<img src="./assets/backgrounds/mosaic_6.png" alt="">
-						</div>
+					<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
@@ -132,17 +127,34 @@ $contentModule = new ContentModel();
 					</div>
 				</div>
 
-				<div class="slider-text-content m-t-50 p-t-30">
-					<p class="bold uppercase">PODIUM’ SPORTS AND ENTERTAINMENT ARENA </p>
-					<p class="uppercase">GLIWICE, POLAND</p>
+					<?php foreach( $data['news'] as $key => $news ): ?>
+					<div class = 'slider-description <?= $key == 0 ? 'active' : '' ?> '  data-num = '<?=$key+1?>'>
+						<div class="slider-text-content m-t-50 p-t-30">
+							<p class="bold uppercase"><?=$news['title'] ?></p>
+							<p><?=$news['description'] ?></p>
+						</div>
 
-					<p class="m-t-50 bold uppercase">TASK RANGE:</p>
-					<p>OTE system , fire walls and ceilings,</p>
-				</div>
+						<div class="align-right m-t-50  p-r-3">
+							<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
+						</div>
+					</div>
+					<?php endforeach; ?>
 
-				<div class="align-right m-t-50  p-r-3">
-					<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
-				</div>
+					<?php foreach( $data['references_slider'] as $key => $ref ): ?>
+					<div class = 'slider-description'  data-num = '<?=$key+4?>'>
+						<div class="slider-text-content m-t-50 p-t-30">
+							<p class="bold uppercase"> <?= $ref['full_name'] ?> </p>
+							<p class="uppercase"> <?= $ref['city'] ?> </p>
+
+							<p class="m-t-50 bold uppercase"><?= $contentModule->getTranslate('contract_details') ?></p>
+							<p><?= $ref['project_details'] ?></p>
+						</div>
+
+						<div class="align-right m-t-50  p-r-3">
+							<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
+						</div>
+					</div>
+					<?php endforeach; ?>				
 			</div>
 		</div>
 	</div>
@@ -284,23 +296,14 @@ $contentModule = new ContentModel();
 <section class="logo__slider" data-aos="fade-up" data-aos-id="logo-slider">
 	<div class="logo__slider--area">
 		<div class="logo__slider--viewer">
-			<img class='first loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='loaded' src="./assets/img/logo2.png" alt="">
-			<img class='loaded' src="./assets/img/logo1.png" alt="">
-			<img class='unloaded' data-src="./assets/img/logo2.png" alt="">
-			<img class='unloaded' data-src="./assets/img/logo1.png" alt="">
-			<img class='unloaded' data-src="./assets/img/logo2.png" alt="">
-			<div class="last"></div>
+			<?php foreach( $data['logos']['get_images'] as $key => $image ): ?>
+				<?php if( $key < 10 ): ?>
+					<img class='first <?= $key == 0 ? "loaded" : "" ?>' src="<?= $image['get_file']['path'] ?>" alt="<?= $image['get_file']['name'] ?>">
+				<?php else: ?>
+					<img class='unloaded' data-src="<?= $image['get_file']['path'] ?>" alt="<?= $image['get_file']['name'] ?>">
+				<?php endif; ?>
+			<?php endforeach;?>		
+			<div class="last"></div>	
 		</div>
 	</div>
 </section>
@@ -314,122 +317,25 @@ $contentModule = new ContentModel();
 	</div>
 
 	<div class="grid-container">
-		<div class="grid__row">
-			<div class="higher">
-				<a href="./assets/backgrounds/mosaic_1.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_1.png" alt="">
-					<div class="mosaic__content">
-						<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-			<div class="smaller">
-				<a href="./assets/backgrounds/mosaic_2.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_2.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-		</div>
+		<?php 
+			$tile_data = [];
+			$class_order = ['higher', 'smaller'];
+			foreach( $data['references_tiles'] as $key => $value ) {
+				if( count( $tile_data ) == 0 ){
+					$tile_data[] = $value;
+				}else{
+					$tile_data[] = $value;
+					$class_order = array_reverse( $class_order );
+					include('./layout/partials/reference_tile_index.php');
+					$tile_data = [];
+				}
+			}
 
-		<div class="grid__row iphone-display-none">
-			<div class="smaller">
-
-				<a href="./assets/backgrounds/mosaic_3.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_3.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-			<div class="higher">
-				<a href="./assets/backgrounds/mosaic_4.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_4.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<div class="grid__row xs-mobile-display-none">
-			<div class="higher">
-				<a href="./assets/backgrounds/mosaic_5.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_5.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-			<div class="smaller">
-				<a href="./assets/backgrounds/mosaic_6.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_6.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<div class="grid__row mobile-display-none">
-			<div class="smaller">
-				<a href="./assets/backgrounds/mosaic_7.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_7.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-			<div class="higher">
-				<a href="./assets/backgrounds/mosaic_8.png" class="glightboxTest"
-					data-glightbox="title: Lightbox title; description: This is the description of the slide">
-					<img src="./assets/backgrounds/mosaic_8.png" alt="">
-					<div class="mosaic__content">
-												<p class="mosaic_name">Shopping Mail</p>
-						<div class="separator"></div>
-						<p class="mosaic_place">Katowice, Poland</p>
-					</div>
-					<div class="blue-layer">
-					</div>
-				</a>
-			</div>
-		</div>
+			if( count( $tile_data ) != 0 ){
+				include('./layout/partials/reference_tile_index.php');
+				$tile_data = [];
+			}
+		?>
 	</div>
 </section>
 

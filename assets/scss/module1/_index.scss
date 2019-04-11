@@ -142,6 +142,16 @@
   }
 }
 
+.slider-description {
+  display: none;
+  .slider-text-content {
+    min-height: 250px;
+  }
+  &.active {
+    display: block;
+  }
+}
+
 .slider-container {
   .slider-window {
     height: 500px;
@@ -760,6 +770,7 @@
   padding-top: 70px;
   padding-bottom: 50px;
   background: $gray;
+  width: 100%;
   .col-md-3 {
     padding-left: 50px;
   }

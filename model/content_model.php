@@ -4,6 +4,7 @@ global $__PAGE_NAME__;
 
 class ContentModel
 {
+    private $page_id = null;
     private $available_languages = [
         'pl' => [],
         'en' => [],
@@ -22,11 +23,13 @@ class ContentModel
             $page_name = $__PAGE_NAME__;
         }
         
-        return json_decode( file_get_contents( $__API . 'get_page_content/' . $page_name . '/' . $this->language_ids[ $this->language ] ), true );
+        return json_decode( file_get_contents( $__API . 'get_page_content/' . $page_name . '/' . $this->language_ids[ $this->language ] . ( $this->page_id ? ('/' . $this->page_id) : '' ) ), true );
     }
 
-    public function __construct()
+    public function __construct( $page_id = null )
     {
+        $this->page_id = $page_id;
+
         session_start();
         if (isset($_GET['lang'])) {
             $this->setLanguage($_GET['lang']);
@@ -55,6 +58,10 @@ class ContentModel
     public function getTranslate($section, $global = false)
     {
         return $this->available_languages[$this->language]['dict'][$section];
+    }
+
+    public function getPageData(){
+        return $this->available_languages[$this->language];
     }
 
     public function getLanguage()
