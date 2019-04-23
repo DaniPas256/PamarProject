@@ -1,12 +1,12 @@
 <?php
 require_once './model/_config.php';
-$__PAGE_NAME__ = 'references_details';
+$__PAGE_NAME__ = 'news_details';
 
 $slug = '';
-if( isset($_GET['article']) ){
-    $slug = $_GET['article'];
+if( isset($_GET['news']) ){
+    $slug = $_GET['news'];
 }else{
-    header('Location: references.php');
+    header('Location: news.php');
 }
 
 require_once './model/content_model.php';
@@ -14,7 +14,7 @@ $contentModule = new ContentModel( $slug );
 $data = $contentModule->getPageData();
 
 if( !is_numeric( $data['content']['id'] ) ){
-    header('Location: references.php');
+    header('Location: news.php');
 }
 
 ?>
@@ -25,10 +25,10 @@ if( !is_numeric( $data['content']['id'] ) ){
 <section class = 'about__banner__section'>
     <div class="row margin-0">
         <div class="col-md-12">
-            <img src="<?=$data['content']['get_file']['path']?>" class = 'about__banner__section--image' alt="">
+            <img src="<?=$data['content']['get_file']['path']?>" class = 'about__banner__section--image' alt="<?=$data['content']['get_file']['name']?>">
 
             <div class="col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1 col-xs-11 col-xs-offset-1 relative refrences-tiltle-holder">
-                <h2 class = 'about__banner__section--title reference--title'><?=$data['content']['full_name']?></h2>
+                <h2 class = 'about__banner__section--title reference--title'><?=$data['content']['title']?></h2>
             </div>
         </div>
     </div>
@@ -37,13 +37,9 @@ if( !is_numeric( $data['content']['id'] ) ){
 <div class = 'm-t-50'></div>
 
 <div class="row margin-0">
-    <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
-        <p class="blue-header"><?= $contentModule->getTranslate('project_description') ?></p>
-        <p class = 'desc'><?=$data['content']['description']?></p>
-    </div>
-    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12">
-        <p class="blue-header"><?= $contentModule->getTranslate('contract_details') ?></p>
-        <p  class = 'desc'><?=$data['content']['project_details']?></p>
+    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <p class="blue-header"><?= date( 'd/m/Y H:i', strtotime( $data['content']['created_at'] ) ); ?></p>
+        <div class = 'desc m-t-30'><?=$data['content']['full_content']?></div>
     </div>
     <div class ='col-md-offset-1'></div>
 </div>
@@ -72,8 +68,8 @@ if( !is_numeric( $data['content']['id'] ) ){
 <?php endif; ?>
 
 <div class="row">
-    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 ">
-        <a href="./references.php">
+    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 ">
+        <a href="./news.php">
             <button class="button-transparent big-button m-t-30 m-b-30 back-button">
                 <?= $contentModule->getTranslate('back') ?>
             </button>

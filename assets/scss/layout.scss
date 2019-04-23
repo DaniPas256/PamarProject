@@ -6,10 +6,20 @@
 @import "module1/_about";
 @import "module1/_experiance";
 @import "module1/_references";
+@import "module1/_news";
+
 body {
   margin: 0;
   padding: 0;
   @include lato;
   font-weight: 400;
   font-size: 12px;
+}
+
+.ginner-container {
+  max-width: 50% !important;
+}
+
+.gdesc-inner {
+  letter-spacing: 1px;
 }

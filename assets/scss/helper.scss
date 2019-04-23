@@ -106,6 +106,14 @@ div.row > div {
 
 .blue-header {
   @include blue-header;
+  &.--red {
+    color: $red;
+    margin: 0;
+    &::before {
+      display: none;
+      background: $red;
+    }
+  }
 }
 
 .blue-layer {

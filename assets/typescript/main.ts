@@ -25,12 +25,9 @@ import { ScrollToClass } from './class/scrollTo.class';
   })
 
   document.addEventListener("DOMContentLoaded", event => {
-
     new FixedMenuClass();
     new ContactModal();
-    console.log(document.querySelector('.section-07'));
     new ScrollToClass();
-
 
     // @ts-ignore
     switch (PAGE_NAME) {
@@ -57,7 +54,9 @@ import { ScrollToClass } from './class/scrollTo.class';
       case 'references_details':
         new GlightboxClass();
         break;
+      case 'news_details':
+        new GlightboxClass();
+        break;
     }
-
   });
 })();

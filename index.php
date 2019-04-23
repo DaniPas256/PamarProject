@@ -80,13 +80,13 @@
 				All
 			</button> -->
 
-			<button class="button-black">
-			<?= $contentModule->getTranslate('slider.news') ?>
+			<!-- <button class="button-black">
+				<?= $contentModule->getTranslate('slider.news') ?>
 			</button>
 
 			<button class="button-black mobile-margin-right">
-			<?= $contentModule->getTranslate('slider.projects') ?>
-			</button>
+				<?= $contentModule->getTranslate('slider.projects') ?>
+			</button> -->
 		</div>
 	</div>
 
@@ -98,7 +98,7 @@
 					
 					<?php foreach( $data['news'] as $key => $image ): ?>
 						<div class="slider-image <?=$key == 0 ? 'active' : '' ?>">
-							<img src="<?=$image['get_files']['path']?>" alt="<?=$image['title']?>">
+							<img src="<?=$image['get_file']['path']?>" alt="<?=$image['title']?>">
 						</div>
 					<?php endforeach; ?>
 
@@ -135,7 +135,9 @@
 						</div>
 
 						<div class="align-right m-t-50  p-r-3">
+						<a href="news_details.php?news=<?=$news['slug']?>">
 							<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
+						</a>
 						</div>
 					</div>
 					<?php endforeach; ?>
@@ -151,7 +153,9 @@
 						</div>
 
 						<div class="align-right m-t-50  p-r-3">
-							<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
+							<a href="reference_details.php?article=<?=$ref['slug']?>">
+								<button class="big-button button-transparent"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
+							</a>
 						</div>
 					</div>
 					<?php endforeach; ?>				

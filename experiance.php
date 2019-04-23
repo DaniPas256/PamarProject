@@ -38,44 +38,63 @@ $data = $contentModule->getPageData();
         <div class="tabs__holder js-tabs-content">
 			<?php foreach( $data['experiance'] as $category => $array ): ?>
                 <div class="tab unactive" data-tab = '<?=$category?>'>
-                    <?php foreach( $array as $k => $exp ): ?>
-                        <div class="row margin-0 <?= $k%2 == 0 ? '' : 'flex-reverse' ?>">
-                            <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <a href="<?= $exp['get_files']['path'] ?>" class="glightboxtab-<?=$category?>">
-                                    <img src="<?= $exp['get_files']['path'] ?>" class = 'experiance-image' alt="<?= $exp['get_files']['name'] ?>">
-                                </a> 
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12 experiance-<?= $k%2 == 0 ? 'right' : 'left' ?>">
-                                <div class="experiance-desc">
-                                    <?= $exp['description'] ?>
+                    <?php $previous_group = 0; ?>
+                    <?php $k = 0; ?>
+                    <?php foreach( $array as $group_id => $exp_array ): ?>
+                        <?php if( $previous_group !== $group_id && $group_id > 2 ): ?>
+                            <h2 class = 'blue-header --red m-b-30'><?=$data['groups'][$group_id]['title']?></h2>
+                            <?=$data['groups'][$group_id]['description']?>
+                            
+                            <div class="m-b-30"></div>
 
-                                    <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
+                            <?php $previous_group = $group_id ?>
+                        <?php endif ?>
+                        <?php foreach( $exp_array as $counter => $exp ): ?>
+                            <div class="row margin-0 <?= $k%2 == 0 ? '' : 'flex-reverse' ?>">
+                                <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                    <a href="<?= $exp['get_files']['path'] ?>" class="glightboxtab-<?=$category?>">
+                                        <img src="<?= $exp['get_files']['path'] ?>" class = 'experiance-image' alt="<?= $exp['get_files']['name'] ?>">
+                                    </a> 
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 experiance-<?= $k%2 == 0 ? 'right' : 'left' ?>">
+                                    <div class="experiance-desc">
+                                        <?php if( $exp['name'] !== '' ): ?>
+                                            <h3 class="blue-header"><?= $exp['name'] ?></h3>
+                                        <?php endif; ?>
+                                        <?= $exp['description'] ?>
 
-                                    <ul class="experiance-list">
-                                        <?php foreach( $exp['get_items'] as $item ): ?>
-                                            <li><?= $item['text'] ?></li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                        
+                                        <?php if( count( $exp['get_items'] ) > 0 ): ?>
+                                            <h4 class="blue-header checkbox__list--title"><?= $contentModule->getTranslate('details_and_benefits') ?></h4>
+                                        <?php endif; ?>
+
+                                        <ul class="experiance-list">
+                                            <?php foreach( $exp['get_items'] as $item ): ?>
+                                                <li><?= $item['text'] ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <?php if( $exp['has_gallery'] == 1 && $exp['get_gallery']['get_images'] != null ): ?>
-                            <?php $chunked = array_chunk( $exp['get_gallery']['get_images'], 4 ); ?>
-                            <div class="row margin-0">
-                                <div class="col-md-12 experiance-gallery col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <?php foreach( $chunked as $chunk ): ?>
-                                        <?php foreach( $chunk as $photo ): ?>
-                                            <a href="<?=$photo['get_file']['path']?>" class="glightboxtab-<?=$category?>">
-                                                <img src="<?=$photo['get_file']['path']?>" class = 'experiance-gallery-image' alt="<?=$photo['get_file']['name']?>">
-                                            </a>
+                            <?php if( $exp['has_gallery'] == 1 && $exp['get_gallery']['get_images'] != null ): ?>
+                                <?php $chunked = array_chunk( $exp['get_gallery']['get_images'], 4 ); ?>
+                                <div class="row margin-0">
+                                    <div class="col-md-12 experiance-gallery col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                        <?php foreach( $chunked as $chunk ): ?>
+                                            <?php foreach( $chunk as $photo ): ?>
+                                                <a href="<?=$photo['get_file']['path']?>" class="glightboxtab-<?=$category?>">
+                                                    <img src="<?=$photo['get_file']['path']?>" class = 'experiance-gallery-image' alt="<?=$photo['get_file']['name']?>">
+                                                </a>
+                                            <?php endforeach; ?>
                                         <?php endforeach; ?>
-                                    <?php endforeach; ?>
+                                    </div>
                                 </div>
-                            </div>
-                        <?php else: ?>
-                            <div class="space-separator"></div>
-                        <?php endif; ?>
+                            <?php else: ?>
+                                <div class="space-separator"></div>
+                            <?php endif; ?>
+                            <?php $k++; ?>
+                        <?php endforeach; ?>
                     <?php endforeach; ?>
                 </div>            
 
