@@ -34,6 +34,45 @@
 			</p>
 		<![endif]-->
 
+	<?php session_start(); ?>
+
+	<?php if( isset( $_SESSION['send'] ) ): ?>
+		<div class="flash-message">
+			<p><?= $contentModule->getTranslate('misc.mail_send', true) ?></p>
+		</div>
+		<style>
+			.flash-message{
+				position: fixed;
+				top: 0;
+				width: 100%;
+				padding: 0 40px; 
+				background: #60c322;
+				color: white;
+				z-index: 9999;
+				transition: opacity 1.5s ease;
+				will-change: opacity;
+			}
+
+			.flash-message.hidden{
+				opacity: 0;
+			}
+
+		</style>
+		<script>
+			(function(){
+				setTimeout(() => {
+					document.querySelector('.flash-message').classList.add('hidden');
+				}, 5000);
+			})();
+		</script>
+		<?php unset($_SESSION['send']); ?>
+	<?php endif;?>	
+
+<style>
+.cookieinfo span{
+	letter-spacing: 1px;
+}
+</style>
 	<div class="fixed-menu">
 		<h4 class="js-contact-modal"><?= $contentModule->getTranslate('nav.contact_us', true) ?></h4>
 		<?php if ($__PAGE_NAME__ === 'index'): ?>

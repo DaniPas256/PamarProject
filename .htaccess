@@ -1,18 +1,6 @@
 #Options +FollowSymLinks
 RewriteEngine on
 
-#FileETag MTime Size
 RewriteBase /
 
 RewriteRule ^$ index.php
-RewriteRule ^([0-9a-zA-Z]*)$ index.php?class=$1
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6&par5=$7
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6&par5=$7&par6=$8
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6&par5=$7&par6=$8&par7=$9
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6&par5=$7&par6=$8&par7=$8&par8=$9
-RewriteRule ^([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*);([0-9a-zA-Z]*)$ index.php?class=$1&zmk=$2&par1=$3&par2=$4&par3=$5&par4=$6&par5=$7&par6=$8&par7=$8&par8=$9&par9=$10

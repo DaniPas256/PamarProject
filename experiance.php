@@ -79,17 +79,17 @@ $data = $contentModule->getPageData();
 
                             <?php if( $exp['has_gallery'] == 1 && $exp['get_gallery']['get_images'] != null ): ?>
                                 <?php $chunked = array_chunk( $exp['get_gallery']['get_images'], 4 ); ?>
+                                        <?php foreach( $chunked as $chunk ): ?>
                                 <div class="row margin-0">
                                     <div class="col-md-12 experiance-gallery col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                        <?php foreach( $chunked as $chunk ): ?>
                                             <?php foreach( $chunk as $photo ): ?>
                                                 <a href="<?=$photo['get_file']['path']?>" class="glightboxtab-<?=$category?>">
                                                     <img src="<?=$photo['get_file']['path']?>" class = 'experiance-gallery-image' alt="<?=$photo['get_file']['name']?>">
                                                 </a>
                                             <?php endforeach; ?>
-                                        <?php endforeach; ?>
                                     </div>
                                 </div>
+                                        <?php endforeach; ?>
                             <?php else: ?>
                                 <div class="space-separator"></div>
                             <?php endif; ?>

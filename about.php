@@ -3,6 +3,7 @@ require_once './model/_config.php';
 $__PAGE_NAME__ = 'about';
 require_once './model/content_model.php';
 $contentModule = new ContentModel();
+$data = $contentModule->getPageData();
 ?>
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
@@ -39,9 +40,9 @@ $contentModule = new ContentModel();
     </div>
 </div>
 
-<div class="row" data-aos="fade-up" data-aos-id="mosaic" >
-    <div class="col-md-10 col-md-offset-1 about__gallery">
-        <a href="./assets/backgrounds/mosaic_1.png" class="glightboxTest">
+<!-- <div class="row" data-aos="fade-up" data-aos-id="mosaic" >
+    <div class="col-md-10 col-md-offset-1 about__gallery"> -->
+        <!-- <a href="./assets/backgrounds/mosaic_1.png" class="glightboxTest">
 			<img src="./assets/backgrounds/mosaic_1.png" class = 'gallery-image' alt="">
             <div class="blue-layer">
 					</div>
@@ -55,9 +56,27 @@ $contentModule = new ContentModel();
 			<img src="./assets/backgrounds/mosaic_3.png" class = 'gallery-image' alt="">
             <div class="blue-layer">
 					</div>
-        </a>
+        </a> -->
+
+        <?php if( $data['gallery'] !== null ): ?>
+            <?php $chunked = array_chunk( $data['gallery']['get_images'], 3 ); ?>
+            <?php foreach( $chunked as $chunk ): ?>
+                <div class="row" data-aos="fade-up" data-aos-id="mosaic" >
+                    <div class="col-md-10 col-md-offset-1 about__gallery">
+                        <?php foreach( $chunk as $photo ): ?>
+                            <a href="<?=$photo['get_file']['path']?>" class="glightboxTest">
+                                <img src="<?=$photo['get_file']['path']?>" class = 'gallery-image' alt="<?=$photo['get_file']['name']?>">
+                                <div class="blue-layer"></div>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="col-md-offset-1"></div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>        
     </div>
-    <div class="col-md-offset-1"></div>
-</div>
+    <!-- <div class="col-md-offset-1"></div>
+</div> -->
+
 
 <?php require_once './layout/_footer.php';?>

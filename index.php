@@ -8,6 +8,7 @@
 <?php require_once './layout/_header.php';?>
 <?php require_once './layout/_nav.php';?>
 
+
 <section class="banner-section relative" data-aos="fade-up">
 	<div class="row p-l-20">
 		<div class="col-md-7 col-sm-12 col-xs-12 relative">
@@ -114,12 +115,9 @@
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-6 mobile-set-padding important-padding col-xs-12">
 			<div class="slider-navigation">
 				<ul class="slider-navigation-list">
-					<li class="slider-item">01</li>
-					<li class="slider-item">02</li>
-					<li class="slider-item">03</li>
-					<li class="slider-item">04</li>
-					<li class="slider-item">05</li>
-					<li class="slider-item">06</li>
+				<?php for( $i = 0; $i < (count($data['news']) + count($data['references_slider'])); $i++ ): ?>
+					<li class="slider-item">0<?=$i+1?></li>
+				<?php endfor?>
 				</ul>
 
 				<div class="slider-progress-bar-tube">
@@ -143,7 +141,7 @@
 					<?php endforeach; ?>
 
 					<?php foreach( $data['references_slider'] as $key => $ref ): ?>
-					<div class = 'slider-description'  data-num = '<?=$key+4?>'>
+					<div class = 'slider-description'  data-num = '<?=$key+(count($data['news'])+1)?>'>
 						<div class="slider-text-content m-t-50 p-t-30">
 							<p class="bold uppercase"> <?= $ref['full_name'] ?> </p>
 							<p class="uppercase"> <?= $ref['city'] ?> </p>
@@ -198,7 +196,7 @@
 		</div>
 	</div>
 
-	<h2 class="tiles__slogan"><?= $contentModule->getTranslate('tile.slogan') ?></h2>
+	<h2 class="tiles__slogan" style = 'padding: 0 50px'><?= $contentModule->getTranslate('tile.slogan') ?></h2>
 
 	<div class="slide__wrapper">
 		<div class="slide_viewer">
@@ -210,7 +208,7 @@
 				<div class="slide_image">
 					<a>
 						<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
-						<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+						<img class=" slide_bg" src="./assets/img/do_1.png" alt="">
 						<div class="overlay"></div>
 						<a href="./experiance.php">
 							<button class="slide_readmore"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
@@ -227,7 +225,7 @@
 				<div class="slide_image">
 					<a>
 						<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
-						<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+						<img class=" slide_bg" src="./assets/img/do_2.png" alt="">
 						<div class="overlay"></div>
 						<a href="./experiance.php?tab=2">
 							<button class="slide_readmore"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
@@ -244,7 +242,7 @@
 				<div class="slide_image">
 					<a>
 						<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
-						<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+						<img class=" slide_bg" src="./assets/img/do_3.png" alt="">
 						<div class="overlay"></div>
 						<a href="./experiance.php?tab=3">
 						<button class="slide_readmore"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
@@ -261,7 +259,7 @@
 				<div class="slide_image">
 					<a>
 						<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
-						<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+						<img class=" slide_bg" src="./assets/img/do_4.png" alt="">
 						<div class="overlay"></div>
 						<a href="./experiance.php?tab=4">
 						<button class="slide_readmore"><?= $contentModule->getTranslate('button.read_more', true) ?></button>
@@ -278,7 +276,7 @@
 				<div class="slide_image">
 					<a>
 						<img class='slide_pattern' src="./assets/backgrounds/pattern.png" alt="">
-						<img class=" slide_bg" src="./assets/backgrounds/2.png" alt="">
+						<img class=" slide_bg" src="./assets/img/do_5.png" alt="">
 						<div class="overlay"></div>
 						<a href="./experiance.php?tab=5">
 						<button class="slide_readmore"><?= $contentModule->getTranslate('button.read_more', true) ?></button>

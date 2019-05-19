@@ -1,12 +1,14 @@
-# Webpack-TypeScript-Sass Starter
+# Pamar
 
-Simply run yarn or npm to install all dependency and use :
-```
-$ npm run build
-```
-to build the project.
+Kod front-end'u strony: http://pamarpszczyna.pl 
 
-if you want to run the builder as soon as you modify your .ts, use :
-```
-$ npm run build-watch
-```
+Stack technologiczny:
+
+  - PHP
+  - CSS3/SCSS
+  - JavaScript/Typescript
+  - Webpack
+
+# Projekt graficzny
+
+Karolina Wiatrzyk - https://www.linkedin.com/in/karolina-wiatrzyk-868308129/

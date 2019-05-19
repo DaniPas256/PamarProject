@@ -49,7 +49,6 @@ if( !is_numeric( $data['content']['id'] ) ){
         <img src="./assets/backgrounds/pattern.png" class = 'pattern' alt="">
     </div>
 </div>
-
 <?php if( $data['content']['has_gallery'] == 1 && $data['content']['get_gallery'] !== null ): ?>
     <?php $chunked = array_chunk( $data['content']['get_gallery']['get_images'], 3 ); ?>
     <?php foreach( $chunked as $chunk ): ?>
