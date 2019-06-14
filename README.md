@@ -1,14 +1,14 @@
-# Pamar
+## PamarPszczyna.pl
 
-Kod front-end'u strony: http://pamarpszczyna.pl 
+Website: http://pamarpszczyna.pl 
 
-Stack technologiczny:
+# Technology stack:
 
   - PHP
   - CSS3/SCSS
   - JavaScript/Typescript
   - Webpack
 
-# Projekt graficzny
+# Design/UI/UX
 
 Karolina Wiatrzyk - https://www.linkedin.com/in/karolina-wiatrzyk-868308129/
