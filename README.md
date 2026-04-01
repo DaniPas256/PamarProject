@@ -8,7 +8,3 @@ Website: http://pamarpszczyna.pl
   - CSS3/SCSS
   - JavaScript/Typescript
   - Webpack
-
-# Design/UI/UX
-
-Karolina Wiatrzyk - https://www.linkedin.com/in/karolina-wiatrzyk-868308129/
